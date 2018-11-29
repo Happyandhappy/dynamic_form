@@ -532,14 +532,16 @@
             <div class="sidenav">
                 <div class="progress_div">
                     <ul class="progressbar" id="progressbar">
-                        <li id="step9" class="active" style="width: 10%" value="9">RECAP</li>
-                        <li id="step10" class="active" style="width: 11%" value="10">GO RUN THE CHOICES</li>
-                        <li id="step11" class="active" style="width: 12%;" value="11">THE CLOSE</li>
-                        <li id="step12" class="active" style="width: 12%;" value="12">GATHER INFORMATION &amp; BANKING</li>
-                        <li id="step13" class="active" style="width: 12%;" value="13">GETTING COMPANY ON THE PHONE</li>
-                        <li id="step14" class="active" style="width: 12%;" value="14">PREP FOR THE CALL</li>
-                        <li id="step15" class="active" style="width: 11%;" value="15">IN CALL INTRODUCTION</li>
-                        <li id="step16" style="width: 10%;" value="16">AFTER CALL VIRTUAL HUB</li>
+                        <li id="step1" class="active" style="width: 8%">Greetings & Discounts</li>
+                        <li id="step2" class="active" style="width: 9%">Basic Information</li>
+                        <li id="step3" class="active" style="width: 10%">Coverage & Needs</li>
+                        <li id="step4" class="active" style="width: 11%">Disability & Health Interview</li>
+                        <li id="step5" class="active" style="width: 12%">Features, Budget & Recap</li>
+                        <li id="step6" class="active" style="width: 12%">Choices & Close</li>
+                        <li id="step7" class="active" style="width: 11%">Information & Banking</li>
+                        <li id="step8" class="active" style="width: 10%">Prep For Call</li>
+                        <li id="step9" class="active" style="width: 9%">Enrollment Call</li>
+                        <li id="step10" style="width: 8%">Virtual Hug</li>
                     </ul>
                 </div>
                 <div class="bar_top"></div>
@@ -2684,8 +2686,8 @@
             });
         }
 
-        for (index = 9; index < 17; index++) {
-            if (index == 15) continue;
+        for (index = 1; index < 11; index++) {
+            if (index == 9) continue;
             document.getElementById('step' + index).addEventListener('click', function(e) {
                 document.getElementsByClassName(e.target.id)[0].click();
             });

@@ -47,7 +47,7 @@
                             </div>
                         </div>
                         <form control="form" class="dynamic-form" id="form">
-                            <input type="hidden" name="page" id="page" value="10">
+                            <input type="hidden" name="page" id="page" value="16">
                             <input type="hidden" name="axisy" id="axisy" value="(#axisy#)">
                             <input name="disposition" id="Disposition" type="hidden" value="">
                             <input type="hidden" control="input " field-name="email_selected" name="email_selected" value="(#email_selected#)">
@@ -61,14 +61,16 @@
                             <input type="hidden" control="input " id="DentalCoverage" value="(#Dental Coverage#)">
                             <input type="hidden" control="input " id="VisionCoverage" value="(#Vision Coverage#)">
 
-                            <button class="button hidden submit" id="submit">SAVE</button>
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step11_rev07" value="NEXT" class="button hidden next step11">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step09_rev07" value="PREVIOUS" class="button hidden pre step9">
+                            <button class="button hidden submit1" id="submit">SAVE</button>
+                            <input type="submit" control="submit" action="submit_and_email_template" email-to="Email" email-template="(#email_selected#)" value="Submit and Email" class="button hidden submit">
+                            <button id="pre" class="button hidden pre">PREVIOUS</button>
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step15_rev07" value="PREVIOUS" class="button hidden step15">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step11_rev07" value="step11" class="button hidden step11">
                             <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step12_rev07" value="step12" class="button hidden step12">
                             <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step13_rev07" value="step13" class="button hidden step13">
                             <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step14_rev07" value="step14" class="button hidden step14">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step15_rev07" value="step15" class="button hidden step15">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step16_rev07" value="step16" class="button hidden step16">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step09_rev07" value="step9" class="button hidden step9">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step10_rev07" value="step10" class="button hidden step10">
 
                             <div class="col-sm-12 ">
                                 <div class="col-sm-12 title " id="">
@@ -532,147 +534,129 @@
             <div class="sidenav">
                 <div class="progress_div">
                     <ul class="progressbar" id="progressbar">
-                        <li id="step9" class="active" style="width: 10%" value="9">RECAP</li>
-                        <li id="step10" class="active" style="width: 11%;" value="10">GO RUN THE CHOICES</li>
-                        <li id="step11" style="width: 12%;" value="11">THE CLOSE</li>
-                        <li id="step12" style="width: 12%;" value="12">GATHER INFORMATION &amp; BANKING</li>
-                        <li id="step13" style="width: 12%;" value="13">GETTING COMPANY ON THE PHONE</li>
-                        <li id="step14" style="width: 12%;" value="14">PREP FOR THE CALL</li>
-                        <li id="step15" style="width: 11%;" value="15">IN CALL INTRODUCTION</li>
-                        <li id="step16" style="width: 10%;" value="16">AFTER CALL VIRTUAL HUB</li>
+                        <li id="step1" class="active" style="width: 8%">Greetings & Discounts</li>
+                        <li id="step2" class="active" style="width: 9%">Basic Information</li>
+                        <li id="step3" class="active" style="width: 10%">Coverage & Needs</li>
+                        <li id="step4" class="active" style="width: 11%">Disability & Health Interview</li>
+                        <li id="step5" class="active" style="width: 12%">Features, Budget & Recap</li>
+                        <li id="step6" class="active" style="width: 12%">Choices & Close</li>
+                        <li id="step7" class="active" style="width: 11%">Information & Banking</li>
+                        <li id="step8" class="active" style="width: 10%">Prep For Call</li>
+                        <li id="step9" class="active" style="width: 9%">Enrollment Call</li>
+                        <li id="step10" class="active" style="width: 8%">Virtual Hug</li>
                     </ul>
                 </div>
                 <div class="bar_top"></div>
                 <div class="col-sm-12 rightbody">
-                    <h4>GO RUN THEIR CHOICES</h4>
+                    <h4>AFTER CALL VIRTUAL HUG</h4>
                     <p></p>
                     <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                        <span style="font-size:12pt;">Stay on the line with me while I look over the results from my providers, compare the results, and find the best plan for you. Then, we are going to talk about the plan I have found for you, the company that best fits your needs, and also how you will secure that coverage today! </span>
+                        <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                            <strong>Application Status:</strong>            
+                            <select field-name="App Status" class="form-control" name="App Status">
+                                <option value="(#App Status#)" selected="" hidden="">(#App Status#)</option>
+								<!--<option value="" selected="" disabled="">Select One</option>-->
+                                <option value="Approved">Approved</option>
+                                <option value="Declined">Declined</option>
+                                <option value="Pending">Pending</option>
+                            </select>
+                        </span>
                     </p>
                     <br>
-                    <p style="font-size:12pt;color:#ff0000;font-style: italic;"><strong>NOTE: </strong>You must keep them engaged by talking about the weather, their dog, grandbaby or whatever will/might keep them talking while your work on their choices. The idea is to get
-                        <span style="font-size:12pt;color:#ff0000;font-weight:700">them</span>
-                        <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">talking.</span>
-                    </p>
-                    <p></p>
-                    <p style="padding: 10px 0px 0px 30px">
-                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
-                                <strong>Carrier and Product:</strong>
-                                <select field-name="Carrier Product 2" name="Carrier Product 2">
-                                    <!--<option value="" selected="" disabled="">Select One</option>-->
-                                    <option value="(#Carrier Product 2#)" selected="" hidden="">(#Carrier Product 2#)</option>
-                                    <option value="Royal Neighbors of America">Royal Neighbors of America</option>
-                                    <option value="Baltimore Life">Baltimore Life</option>
-                                    <option value="Liberty Bankers Life">Liberty Bankers Life</option>
-                                    <option value="American General">American General</option>
-                                    <!--<option value="Great Western">Great Western</option>-->
-                                    <!--<option value="Foresters">Foresters</option>-->
-                                    <!--<option value="Prosperity">Prosperity</option>-->
-                                    <!--<option value="5Star Life">5Star Life</option>-->
-                                </select>
-                                <select field-name="Plan" name="Plan">
-                                </select>
-                            </span>
-                    </p>
-                    <p style="padding: 10px 0px 0px 30px">
-                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
-                                <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
-                                <strong>Choices:</strong>
-                                <!--<input type="text" control="input " field-name="Quote" name="Quote" value="(#Quote#)">-->
-                                <textarea field-name="Quote" name="Quote">(#Quote#)</textarea>
-                            </span>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Okay (#Preferred Name#), great job! We got you approved for that coverage! So, as you can see, this is a thorough process and this is real coverage, and despite some of your health conditions, we were able to get you covered, so never let this policy lapse. Now let me tell you what is going to happen next:</span>
                     </p>
                     <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
-                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
                     </p>
-
                     <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="font-size:12pt;color:#ff0000;font-weight:700">*IF NO EMAIL*</span>
+                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
                     </p>
-                    <h4>DESCRIPTION OF THE CHOICES</h4>
-                    <p></p>
                     <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                        <span style="font-size:12pt;">I have </span>
-                        <span style="font-size:12pt;font-weight:700">great news</span>
-                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">for you (#Preferred Name#), I found exactly what you were looking for! I picked it based on all the things we talked about.</span>
+                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">You will receive a packet in the mail in 10-14 days and it will have more about the plan we chose and my business card. Now, you’re going to receive your policy in the mail from (#Carrier Product 2#) in around 10-14 days. I am putting you on my calendar for a call back around that same time to make sure you received your policy and to answer any questions you may have. I really enjoyed working on this with you today! You are a great person to talk to! If you ever need me or have any questions, do not hesitate to call me, okay? And if you know of anyone looking for coverage like this, send them my way! If they write with me, I will send you a gift card for $25!</span>
                     </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left"><span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                    <br>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="font-size:12pt;color:#ff0000;font-weight:700">Disconnect with the Client, schedule an ASR call on your Google Calender, submit your sales report and disposition as SALE! Now move to the next call!</span>
+                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
                     </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left"><span style="font-size:12pt;">It has the features we discussed.</span><span style="font-size:10pt;">&nbsp;</span><span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">(Remember, the following are examples. Use what they have given you if they said they are looking for certain features.)</span>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal"></span>
                     </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left"><span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                    <br>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="font-size:12pt;color:#ff0000;font-weight:700">*IF EMAIL*</span>
+                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
                     </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left"><span style="font-size:12pt;">This plan has rates that are guaranteed and locked in for life. It gains cash value that you can borrow against if you should ever need to. It is also permanent coverage, so this policy will never change, even when your health does. This plan takes you to at least age 100. And the good news is I believe you will qualify for it based on your health and it is within your budget.</span>
-                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal"></span>
                     </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left"><span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal"></span>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="font-size:12pt;color:#ff0000;font-weight:700">*If they have an email send them the Dynamic Insurance email from the canned responses in your gmail.</span>
+                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
                     </p>
-
-                    <!-- DESCRIPTIONS -->
-                    <div id="descriptions">
-                        <div class="rna">
-                            <h4>RNA DESCRIPTION</h4>
-                            <p>
-                                <span style="font-size:12pt;">The name of the company that I recommend for you is Royal Neighbors of America. Royal Neighbors is 130 years old, and carries an A rating. Part of the reason I believe they carry such a strong rating is that they are one of the </span>
-                                <span style="-webkit-text-decoration-skip:none;text-decoration:underline;text-decoration-skip-ink:none;font-size:12pt">ONLY</span>
-                                <!-- <span style="font-size:12pt;">&nbsp;</span> -->
-                                <span style="font-size:12pt;font-weight:700">Not-For-Profit</span><span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">&nbsp;Insurance Company that I know of in this country. What that means is that they take the profits they make and invest them back into their communities and members, like you and your family. </span>
-                            </p>
-                            <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left"><span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
-                            </p>
-                            <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left"><span style="font-size:12pt;">They offer </span><span style="font-size:12pt;font-weight:700">several innovative discount programs</span><span style="font-size:12pt;">. One gets you discounts on all of your </span>
-                                <span style="font-size:12pt;font-weight:700">prescription medication</span><span style="font-size:12pt;">, and the other provides </span><span style="font-size:12pt;font-weight:700">substantial discounts on retail shopping </span>
-                                <span style="font-size:12pt;">- places like WalMart, Target, Walgreens… places you actually go, and will actually use it. They also offer</span><span style="font-size:12pt;font-weight:700">&nbsp;free and dramatically reduced legal services</span>
-                                <span style="font-size:12pt;">to their members, through attorneys in (#City#). They offer </span><span style="font-size:12pt;font-weight:700">college</span>
-                                <span style="font-size:12pt;">scholarships to your children, grandchildren, and even your great-grandchildren. I also want to tell you about a benefit I find very important because I think it speaks to the heart of the company. Now, Royal Neighbors understands that we
-                                        all experience hard times, so they set aside</span>
-                                <span style="font-size:12pt;font-weight:700">$200 annually for each one of their members in the form of a Hardship Grant</span><span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">. If for any reason you fall on financial difficulties and cannot make your premium payment, Royal Neighbors uses the $200 to make your payment for you. It’s not a loan, it’s not something you have to pay back. It’s just Royal Neighbors making sure you don’t lose your insurance coverage just because you fell on hard times.</span>
-                            </p>
-                            <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left"><span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
-                            </p>
-                            <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left"><span style="font-size:12pt;">Now those are JUST A FEW of the living benefits that you’re going to gain by being a member of Royal Neighbors of America, and while those benefits are amazing, what I really love about doing business with Royal Neighbors is the way that they </span>
-                                <span style="font-size:12pt;font-weight:700">do</span><span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">&nbsp;business. Royal Neighbors is not one of these companies that you may have seen on TV who say ridiculous things like “No health questions asked…” or, ‘Three Simple Health Questions and Everybody is Approved! Have you seen those commercials on tv? What those companies don’t tell people is that they basically approve everybody, but when the time comes and their customer actually passes away, that is when they launch a full blown investigation, start pulling medical records and basically do everything they can to delay getting the payment to the family for as long as possible, if they ever pay at all. This company does not work that way. Royal Neighbors actually conducts a health interview over the phone with an underwriter. They run your MIB, which is your health report, and a script check to see what medications you take so there are no surprises. They actually qualify you on the front end which means that when your time comes and your family needs the money, your claim will be paid within 24­-48 hours. They are able to that because they actually qualify you for the coverage up front. Wouldn’t you agree that is how all companies should work? </span>
-                            </p>
-                            <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left"><span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
-                            </p>
-                        </div>
-                        <div class="balt">
-                            <h4>DESCRIPTION OF BALTIMORE LIFE</h4>
-                            <p></p>
-                            <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                                <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
-                                        The name of the company I’m going to recommend for you is Baltimore Life. They are over 130 years old and have an A-rating. I like doing business with Baltimore Life mostly because of the way that they do business. Baltimore Life is not one these companies that you may have seen on tv who say, no health questions or three simple health questions and everybody is approved!? Have you seen ads like that on tv? What those companies don't tell people is that they approve everybody but when the time comes and their customer actually passes away, they launch a full-blown investigation, start pulling medical records, and basically do everything they can to delay getting the payment to the family for as long as possible, if they ever pay at all. This company does not work that way. Baltimore Life actually conducts a health interview over the phone with an underwriter. They run your MIB, which is your health report, and a script check to see what medications you take, so there are no surprises. They qualify you on the front-end, so that when your time comes and (#Beneficiary#) needs the money they will have it quickly. We have seen these claims paid within 24-48 hours which is critical so (#Beneficiary#) will be able to tend to all of your affairs in a timely manner. Baltimore Life are able to do that because they actually qualify you for coverage on the front-end, instead of trying to disqualify you on the back-end. Now wouldn't you agree that is how all companies should work?
-                                    </span>
-                            </p>
-                            <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left"><span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
-                            </p>
-                        </div>
-                        <div class="lbl">
-                            <h4>DESCRIPTION OF LIBERTY BANKERS LIFE</h4>
-                            <p></p>
-                            <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left"><span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">The name of the company I’m going to recommend for you is Liberty Bankers Life. They were established in 1958 and have an A-rating. I like doing business with Liberty Bankers Life mostly because of the way that they do business. Liberty Bankers Life is not one these companies that you may have seen on tv who say, no health questions or three simple health questions and everybody is approved!? Have you seen ads like that on tv? What those companies don't tell people is that they approve everybody but when the time comes and their customer actually passes away, they launch a full-blown investigation, start pulling medical records, and basically do everything they can to delay getting the payment to the family for as long as possible, if they ever pay at all. This company does not work that way. Liberty Bankers Life actually conducts a health interview over the phone with an underwriter. They run your MIB, which is your health report, and a script check to see what medications you take, so there are no surprises. They qualify you on the front-end, so that when your time comes and (#Beneficiary#) needs the money they will have it quickly. We have seen these claims paid within 24-48 hours which is critical so (#Beneficiary#) will be able to tend to all of your affairs in a timely manner. Liberty Bankers Life are able to do that because they actually qualify you for coverage on the front-end, instead of trying to disqualify you on the back-end. Now wouldn't you agree that is how all companies should work?</span>
-                            </p>
-                            <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left"><span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
-                            </p>
-                        </div>
-                        <div class="amer">
-                            <h4>AMERICAN GENERAL</h4>
-                            <p></p>
-                            <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                                <span style="font-size:12pt;">The name of the company I’m going to recommend for you is (#Carrier Product 2#). They were founded in 1983 and have an A-rating. I like doing business with (#Carrier Product 2#) mostly because of the way that they do business. There are a lot of these companies that you may have seen on tv who say, no health questions or three simple health questions and everybody is approved!? Have you seen ads like that on tv? What those companies don't tell people is that they approve everybody but when the time comes and their customer actually passes away, they launch a full-blown investigation, start pulling medical records, and basically do everything they can to delay getting the payment to the family for as long as possible, if they ever pay at all. We've researched those companies and (#Carrier Product 2#) doesn' t operate like that.? This is the one that is the best at actually paying the death benefit when that time comes and isn't that what this is all about?? This is designed for those who want a simplified application process that does not require answering underwriting questions and providing physician information. Everyone qualifies for this coverage </span>
-                                <span style="-webkit-text-decoration-skip:none;text-decoration:underline;text-decoration-skip-ink:none;font-size:12pt">regardless</span><span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">&nbsp;of health. Now doesn't that sound like the kind of plan you want?</span>
-                            </p>
-                            <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left"><span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
-                            </p>
-                            <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left"><span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Again, this plan is a true, permanent whole life policy, so the death benefit will never diminish, decrease, or go away. What you buy today is what your family will have when they need it most.</span>
-                            </p>
-                            <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left"><span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">?</span>
-                            </p>
-                        </div>
-                    </div>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal"></span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Okay, so, I told you that you would get an Email from me, go ahead and see if it is in there. The subject line should say “DYNAMIC INSURANCE SERVICES - (#Preferred Name#)”. Do you see it? Okay, good, go ahead and open that for me. Okay, now in the Email, you will find some links for you to explore. The first one will take you to your new insurance company, 
+                        <select field-name="Carrier Product 2" name="Carrier Product 2">
+                            <option value="Royal Neighbors of America">Royal Neighbors of America</option>
+                            <option value="Baltimore Life">Baltimore Life</option>
+                            <option value="Liberty Bankers Life">Liberty Bankers Life</option>
+                            <option value="American General">American General</option>
+                            <!--<option value="Great Western">Great Western</option>-->
+                            <!--<option value="Foresters">Foresters</option>-->
+                            <!--<option value="Prosperity">Prosperity</option>-->
+                            <!--<option value="5Star Life">5Star Life</option>-->
+                        </select>
+                        <select field-name="Plan" name="Plan">
+                        </select>
+                        . The second one will take you to our company website. When you get a chance, go explore both of those links with your family so they can see exactly who you’ve got working for you. Now, the third link in the Email should say “YOUR SENIOR BENEFITS ADVOCATE - (#Sold Agent#). Do you see that one? Ok, great! Go ahead and click on that one and let me know what you see.</span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">*They will comment on seeing your picture </span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                        <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                            Yes, that’s me! I wanted you to be able to put a face with a voice. Now, under my picture, you should see one more link that says “DID YOU HAVE A GREAT EXPERIENCE WITH AND WANT US TO KNOW ABOUT IT?” Do you see that link (#Preferred Name#)? Okay good, go ahead and click on that for me. It should take you to our Facebook page. We are a family owned and operated Senior Benefits Advocacy Group, and being small allows us to work with our clients on a level that most of these much bigger companies just can’t or won’t do. However, being small, it’s also hard for people to find us. So what we’ve learned is that when our clients take the time to leave us a review here on Facebook, it makes sure that more people see our company, and we get the opportunity to help more people. So, if you would just take 4 or 5 minutes, and write 2 or 3 sentences about your experience working with us today, it would mean the world to our company. Okay?
+                        </span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Thank you so much! </span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                            And lastly you will receive your policy in the mail from (#Carrier Product 2#) in around 10-14 days. I am putting you on my calendar for a call back around that same time to make sure you received your policy and to answer any questions you may have. I really enjoyed working on this with you today! You are a great person to talk to! If you ever need me or have any questions, do not hesitate to call me, okay? And if you know of anyone looking for coverage like this, send them my way! If they write with me, I will send you a gift card for $25!
+                        </span>
+                    </p>
+                    <br>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="font-size:12pt;color:#ff0000;font-weight:700">Disconnect with the client, schedule an ASR call on your Google calender, submit your sales report and CLICK THE SUBMIT AND EMAIL BUTTON BELOW. This sends your client a welcome kit and dispositions them as a SALE! Now move to the next call!</span>
+                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal"></span>
+                    </p>
+                    <br>
+                    <br>
                 </div>
                 <div class="bar_bottom">
-                    <a class="btn button submit" onclick="save();">SAVE</a>
-                    <a class="btn button next" onclick="next();">NEXT</a>
+                    <a class="btn button submit1" onclick="save();">SAVE</a>
+                    <a class="btn button submit" onclick="saveandemail();">Submit and Email</a>
                     <a class="btn button pre" onclick="pre();">PREVIOUS</a>
                 </div>
             </div>
@@ -1194,8 +1178,21 @@
         margin-top: 15px;
     }
     
-    .submit {
+    .submit,
+    .submitnav {
+        background-color: #E45C25;
+        color: white;
+        width: 200px;
+    }
+    
+    .submit1 {
         float: left;
+        margin-top: 15px;
+    }
+    
+    .submit:focus,
+    .submit:hover {
+        color: white;
     }
     /* Progress bar css */
     
@@ -1311,7 +1308,7 @@
         padding-left: 0px;
         border-bottom: none!important;
         width: 50%;
-        font-size: 16px!important;
+        font-size: 13px!important;
     }
     
     .company {
@@ -1331,14 +1328,6 @@
 
 <script type="text/javascript">
     
-    function hideTags() {
-        var names = ['rna', 'balt', 'lbl', 'amer'];
-        for (var i = 0; i < names.length; i++) {
-            document.getElementsByClassName(names[i])[0].style.display = 'none';
-        }
-    }
-
-
     function planSet(company) {
 
         var plans = {
@@ -1357,10 +1346,7 @@
         } catch (e) {
             return;
         }
-        
-        // document.getElementsByName('Carrier Product 2')[2].style.border = "none";
-        
-        
+
         var selects, index;
         selects = document.getElementsByName("Plan");
         for (var i = 0; i < selects.length; i++) {
@@ -1377,37 +1363,21 @@
         }
         document.getElementById('Plan').value = selects[0].value;
         document.getElementsByClassName('plan')[0].value = selects[1].value;
-
-        hideTags();
-        if (company == 'Royal Neighbors of America') {
-            document.getElementsByClassName('rna')[0].style.display = 'block';
-        } else if (company == 'Baltimore Life') {
-            document.getElementsByClassName('balt')[0].style.display = 'block';
-        } else if (company == 'Liberty Bankers Life') {
-            document.getElementsByClassName('lbl')[0].style.display = 'block';
-        } else if (company == 'American General') {
-            document.getElementsByClassName('amer')[0].style.display = 'block';
-        }
     }
 
     (function() {
         cur_page = parseInt(document.getElementById('page').value);
-        hideTags();
+
         var names = ['Gender', 'App Status', 'Carrier Product 2', 'Account Type', 'Plan', 'Sold Agent', 'Dental Plan', 'Dental Coverage', 'Vision Coverage'];
         var ids = ['Gender', 'AppStatus', 'CarrierProduct2', 'AccountType', 'Plan', 'SoldAgent', 'DentalPlan', 'DentalCoverage', 'VisionCoverage'];
-
         var inputs, index, name, notes, selects;
         for (var i = 0; i < names.length; i++) {
             selects = document.getElementsByName(names[i]);
-            
-            var selectValue = document.getElementById(ids[i]).value;            
-            // if (names[i]=="Carrier Product 2" && selectValue == "")
-            //     selectValue = "Royal Neighbors of America";
-            
             for (index = 0; index < selects.length; index++) {
-                    selects[index].value = selectValue;
+                if (document.getElementById(ids[i]).value != "" && document.getElementById(ids[i]).value != null)
+                    selects[index].value = document.getElementById(ids[i]).value;
             }
-            if (names[i] == "Carrier Product 2") planSet(selectValue);
+            if (names[i] == "Carrier Product 2") planSet(document.getElementById(ids[i]).value);
         }
 
         inputs = document.getElementsByTagName('input');
@@ -1459,35 +1429,41 @@
                 return false;
         }
 
-        for (index = 9; index < 17; index++) {
+        for (index = 1; index < 11; index++) {
             if (index == 10) continue;
-            document.getElementById('step' + index).addEventListener('click', function(e) {
-                var id = e.target.id;
-                if (checkStatus() && (id == 'step13' || id == 'step14' || id == 'step15')) {
-                    return;
-                }
+            document.getElementById('step' + index).addEventListener('click', function(e) {               
                 document.getElementsByClassName(e.target.id)[0].click();
             });
         }
 
+        document.getElementsByClassName('pre')[0].addEventListener('click', function(e) {
+            e.preventDefault();
+            if (checkStatus()) {
+                document.getElementsByClassName('step7')[0].click();
+            } else {
+                document.getElementsByClassName('step9')[0].click();
+            }
+        });
+
     })();
 
-    function save() {
-        document.getElementsByClassName('submit')[0].click();
+    function cleardispo() {
+        document.getElementById('Disposition').value = "Sale";
+        // alert("Info Saved!");
     }
 
-    function next() {
-        if (document.getElementsByName('Carrier Product 2')[0].value=="Select One" || document.getElementsByName('Carrier Product 2')[0].value==""){
-            document.getElementsByName('Carrier Product 2')[2].style.border = "solid 1px #FF0000";
-            
-        }else{
-            document.getElementsByClassName('next')[0].click();    
-        }
+    function save() {
+        document.getElementsByClassName('submit1')[0].click();
     }
-    
+
+    function saveandemail() {
+        document.getElementsByClassName('submit')[0].click();
+        cleardispo();
+    }
+
     function pre() {
         document.getElementsByClassName('pre')[0].click();
     }
-  
-  
+ 
+ 
 </script>

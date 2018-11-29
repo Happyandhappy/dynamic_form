@@ -47,7 +47,7 @@
                             </div>
                         </div>
                         <form control="form" class="dynamic-form" id="form">
-                            <input type="hidden" name="page" id="page" value="16">
+                            <input type="hidden" name="page" id="page" value="4">
                             <input type="hidden" name="axisy" id="axisy" value="(#axisy#)">
                             <input name="disposition" id="Disposition" type="hidden" value="">
                             <input type="hidden" control="input " field-name="email_selected" name="email_selected" value="(#email_selected#)">
@@ -61,14 +61,14 @@
                             <input type="hidden" control="input " id="DentalCoverage" value="(#Dental Coverage#)">
                             <input type="hidden" control="input " id="VisionCoverage" value="(#Vision Coverage#)">
 
-                            <button class="button hidden submit1" id="submit">SAVE</button>
-                            <input type="submit" control="submit" action="submit_and_email_template" email-to="Email" email-template="(#email_selected#)" value="Submit and Email" class="button hidden submit">
-                            <button id="pre" class="button hidden pre">PREVIOUS</button>
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step15_rev07" value="PREVIOUS" class="button hidden step15">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step11_rev07" value="step11" class="button hidden step11">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step12_rev07" value="step12" class="button hidden step12">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step13_rev07" value="step13" class="button hidden step13">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step14_rev07" value="step14" class="button hidden step14">
+                            <button class="button hidden submit" id="submit">SAVE</button>
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step05_rev07" value="NEXT" class="button hidden next step5">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step03_rev07" value="PREVIOUS" class="button hidden pre step3">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step01_rev07" value="step1" class="button hidden step1">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step02_rev07" value="step2" class="button hidden step2">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step06_rev07" value="step6" class="button hidden step6">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step07_rev07" value="step7" class="button hidden step7">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step08_rev07" value="step8" class="button hidden step8">
                             <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step09_rev07" value="step9" class="button hidden step9">
                             <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step10_rev07" value="step10" class="button hidden step10">
 
@@ -534,127 +534,134 @@
             <div class="sidenav">
                 <div class="progress_div">
                     <ul class="progressbar" id="progressbar">
-                        <li id="step9" class="active" style="width: 10%" value="9">RECAP</li>
-                        <li id="step10" class="active" style="width: 11%" value="10">GO RUN THE CHOICES</li>
-                        <li id="step11" class="active" style="width: 12%" value="11">THE CLOSE</li>
-                        <li id="step12" class="active" style="width: 12%" value="12">GATHER INFORMATION &amp; BANKING</li>
-                        <li id="step13" class="active" style="width: 12%" value="13">GETTING COMPANY ON THE PHONE</li>
-                        <li id="step14" class="active" style="width: 12%" value="14">PREP FOR THE CALL</li>
-                        <li id="step15" class="active" style="width: 11%" value="15">IN CALL INTRODUCTION</li>
-                        <li id="step16" class="active" style="width: 10%" value="16">AFTER CALL VIRTUAL HUB</li>
+                        <li id="step1" class="active" style="width: 8%">Greetings & Discounts</li>
+                        <li id="step2" class="active" style="width: 9%">Basic Information</li>
+                        <li id="step3" class="active" style="width: 10%">Coverage & Needs</li>
+                        <li id="step4" style="width: 11%">Disability & Health Interview</li>
+                        <li id="step5" style="width: 12%">Features, Budget & Recap</li>
+                        <li id="step6" style="width: 12%">Choices & Close</li>
+                        <li id="step7" style="width: 11%">Information & Banking</li>
+                        <li id="step8" style="width: 10%">Prep For Call</li>
+                        <li id="step9" style="width: 9%">Enrollment Call</li>
+                        <li id="step10" style="width: 8%">Virtual Hug</li>
                     </ul>
                 </div>
                 <div class="bar_top"></div>
                 <div class="col-sm-12 rightbody">
-                    <h4>AFTER CALL VIRTUAL HUG</h4>
-                    <p></p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                        <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
-                            <strong>Application Status:</strong>            
-                            <select field-name="App Status" class="form-control" name="App Status">
-                                <option value="(#App Status#)" selected="" hidden="">(#App Status#)</option>
-								<!--<option value="" selected="" disabled="">Select One</option>-->
-                                <option value="Approved">Approved</option>
-                                <option value="Declined">Declined</option>
-                                <option value="Pending">Pending</option>
-                            </select>
-                        </span>
-                    </p>
-                    <br>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Okay (#Preferred Name#), great job! We got you approved for that coverage! So, as you can see, this is a thorough process and this is real coverage, and despite some of your health conditions, we were able to get you covered, so never let this policy lapse. Now let me tell you what is going to happen next:</span>
-                    </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
-                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
-                    </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                        <span style="font-size:12pt;color:#ff0000;font-weight:700">*IF NO EMAIL*</span>
-                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
-                    </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">You will receive a packet in the mail in 10-14 days and it will have more about the plan we chose and my business card. Now, you’re going to receive your policy in the mail from (#Carrier Product 2#) in around 10-14 days. I am putting you on my calendar for a call back around that same time to make sure you received your policy and to answer any questions you may have. I really enjoyed working on this with you today! You are a great person to talk to! If you ever need me or have any questions, do not hesitate to call me, okay? And if you know of anyone looking for coverage like this, send them my way! If they write with me, I will send you a gift card for $25!</span>
-                    </p>
-                    <br>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                        <span style="font-size:12pt;color:#ff0000;font-weight:700">Disconnect with the Client, schedule an ASR call on your Google Calender, submit your sales report and disposition as SALE! Now move to the next call!</span>
-                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
-                    </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
-                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal"></span>
-                    </p>
-                    <br>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                        <span style="font-size:12pt;color:#ff0000;font-weight:700">*IF EMAIL*</span>
-                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
-                    </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
-                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal"></span>
-                    </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                        <span style="font-size:12pt;color:#ff0000;font-weight:700">*If they have an email send them the Dynamic Insurance email from the canned responses in your gmail.</span>
-                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
-                    </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
-                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal"></span>
-                    </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Okay, so, I told you that you would get an Email from me, go ahead and see if it is in there. The subject line should say “DYNAMIC INSURANCE SERVICES - (#Preferred Name#)”. Do you see it? Okay, good, go ahead and open that for me. Okay, now in the Email, you will find some links for you to explore. The first one will take you to your new insurance company, 
-                        <select field-name="Carrier Product 2" name="Carrier Product 2">
-                            <option value="Royal Neighbors of America">Royal Neighbors of America</option>
-                            <option value="Baltimore Life">Baltimore Life</option>
-                            <option value="Liberty Bankers Life">Liberty Bankers Life</option>
-                            <option value="American General">American General</option>
-                            <!--<option value="Great Western">Great Western</option>-->
-                            <!--<option value="Foresters">Foresters</option>-->
-                            <!--<option value="Prosperity">Prosperity</option>-->
-                            <!--<option value="5Star Life">5Star Life</option>-->
-                        </select>
-                        <select field-name="Plan" name="Plan">
-                        </select>
-                        . The second one will take you to our company website. When you get a chance, go explore both of those links with your family so they can see exactly who you’ve got working for you. Now, the third link in the Email should say “YOUR SENIOR BENEFITS ADVOCATE - (#Sold Agent#). Do you see that one? Ok, great! Go ahead and click on that one and let me know what you see.</span>
-                    </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
-                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
-                    </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                        <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">*They will comment on seeing your picture </span>
-                    </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
-                        <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
-                    </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
-                            Yes, that’s me! I wanted you to be able to put a face with a voice. Now, under my picture, you should see one more link that says “DID YOU HAVE A GREAT EXPERIENCE WITH AND WANT US TO KNOW ABOUT IT?” Do you see that link (#Preferred Name#)? Okay good, go ahead and click on that for me. It should take you to our Facebook page. We are a family owned and operated Senior Benefits Advocacy Group, and being small allows us to work with our clients on a level that most of these much bigger companies just can’t or won’t do. However, being small, it’s also hard for people to find us. So what we’ve learned is that when our clients take the time to leave us a review here on Facebook, it makes sure that more people see our company, and we get the opportunity to help more people. So, if you would just take 4 or 5 minutes, and write 2 or 3 sentences about your experience working with us today, it would mean the world to our company. Okay?
-                        </span>
-                    </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
-                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
-                    </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Thank you so much! </span>
-                    </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
-                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
-                    </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
-                            And lastly you will receive your policy in the mail from (#Carrier Product 2#) in around 10-14 days. I am putting you on my calendar for a call back around that same time to make sure you received your policy and to answer any questions you may have. I really enjoyed working on this with you today! You are a great person to talk to! If you ever need me or have any questions, do not hesitate to call me, okay? And if you know of anyone looking for coverage like this, send them my way! If they write with me, I will send you a gift card for $25!
-                        </span>
-                    </p>
-                    <br>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                        <span style="font-size:12pt;color:#ff0000;font-weight:700">Disconnect with the client, schedule an ASR call on your Google calender, submit your sales report and CLICK THE SUBMIT AND EMAIL BUTTON BELOW. This sends your client a welcome kit and dispositions them as a SALE! Now move to the next call!</span>
-                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
-                    </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
-                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal"></span>
-                    </p>
-                    <br>
-                    <br>
+                    <div id="cur_insu">
+                        <h4>CURRENT INSURANCE</h4>
+                        <p></p>
+                        <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Do you have any life insurance in place currently?</span>
+                        </p>
+                        <br>
+                        <ul class="lst-kix_av0kvlwgpxvb-0 start" style="padding:0;margin:0">
+                            <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:36pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                                <span style="font-size:12pt;color:#ff0000;font-weight:700">NO:</span>
+                                <span style="font-size:10pt;">&nbsp;</span>
+                                <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Well, I am going to help you take care of that today.</span>
+                            </li>
+                            <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:36pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                                <span style="font-size:12pt;color:#ff0000;font-weight:700">YES:</span>
+                                <span style="font-size:10pt;">&nbsp;</span>
+                                <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">So are you looking to add to that coverage, replace that coverage with a better plan or get a better price?</span>
+                            </li>
+                        </ul>
+                        <div class="notes" style="padding-left: 40px;">
+                            <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                                <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                            </p>
+                            <p style="padding:0px 0px 10px 0px;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                                <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                        <strong>Current Insurance Info:</strong>
+                                        <!--<input type="text" control="input " field-name="Current Insurance Info" name="Current Insurance Info" value="(#Current Insurance Info#)">-->
+                                        <textarea field-name="Current Insurance Info" name="Current Insurance Info">(#Current Insurance Info#)</textarea>
+                                    </span>
+                            </p>
+                            <div class="notes_content">
+                                <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                                    <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:italic;"><strong>NOTE: </strong>Here you want to understand how much coverage they have, how long they have had it and how much they are paying for it.</span>
+                                </p>
+                                <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                                    <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                                </p>
+                                <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                                    <span style="font-size:12pt;color:#ff0000"><strong>NOTE: </strong> </span>
+                                    <span style="font-size:12pt;color:#ff0000;font-weight:700">If they are replacing</span>
+                                    <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:italic;">find out why they want to replace and make them aware that it must be in their best interest or you can't replace (see Replacement Disclosure) and gather as much info as possible, such as how much coverage they have, how much they are paying for it and how long they have had it. It is important to understand if they have a product that is not going to last their whole life and to find a good reason to replace the coverage if any exists. Call their company to find out if they are not sure. Be their advocate!</span>
+                                </p>
+                            </div>
+                            <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                                <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                            </p>
+                        </div>
+                        <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                        </p>
+                    </div>
+                    <div id="cov_amount">
+                        <h4>NEEDS AND COVERAGE AMOUNTS</h4>
+                        <p></p>
+                        <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                            <span style="color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                        </p>
+                        <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Now (#Preferred Name#), I know you said earlier that you want to make sure (#Beneficiary#) does not have to carry the financial burden of your final expenses, so what most of our clients are looking for are plans between $10,000 and $20,000 dollars in coverage. Does that sound right to you? Ok perfect then that is what we will help you put in place today.</span>
+                        </p>
+                        <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                        </p>
+                        <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                            <span style="font-size:12pt;color:#ff0000"><strong>NOTE: </strong></span>
+                            <span style="font-size:12pt;color:#ff0000;font-weight:700;font-style: italic;">IF NO: </span>
+                            <span style="font-size:12pt;">OK then about how much coverage did you have in mind?</span>
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:italic;">ALWAYS GET A RANGE</span>
+                        </p>
+                        <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
+                        </p>
+                        <div class="notes" style="padding:10px 0px 0px 45px;">
+                            <p>
+                                <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                        <strong>Desired Coverage Amount:</strong>
+                                        <input type="text" control="input " field-name="Burial/Cremation" name="Burial/Cremation" value="(#Burial/Cremation#)">
+                                    </span>
+                            </p>
+                            <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                                <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:italic;"><strong>NOTE: </strong>We are looking for a range of coverage here. Make a note of coverage amount for use later.</span>
+                            </p>
+                            <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                                <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                            </p>
+                            <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                                <span style="font-size:12pt;color:#ff0000;font-style: italic;"><strong>NOTE: </strong>Only Liberty Bankers offers child and grandchild ryders.</span>
+                                <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
+                            </p>
+                            <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                                <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
+                            </p>
+                        </div>
+                        <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
+                        </p>
+                        <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Are there any Children under 18 that you wanted to cover as well? </span>
+                        </p>
+                        <p style="padding:5px 0px 5px 30px;">
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                    <strong>Child/Grandchild information:</strong>
+                                    <!--<input type="text" control="input " field-name="Child/G-Child" name="Child/G-Child" value="(#Child/G-Child#)">-->
+                                    <textarea field-name="Child/G-Child" name="Child/G-Child">(#Child/G-Child#)</textarea>
+                                </span>
+                        </p>
+                        <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                        </p>
+                    </div>
                 </div>
                 <div class="bar_bottom">
-                    <a class="btn button submit1" onclick="save();">SAVE</a>
-                    <a class="btn button submit" onclick="saveandemail();">Submit and Email</a>
+                    <a class="btn button submit" onclick="save();">SAVE</a>
+                    <a class="btn button next" onclick="next();">NEXT</a>
                     <a class="btn button pre" onclick="pre();">PREVIOUS</a>
                 </div>
             </div>
@@ -1176,21 +1183,8 @@
         margin-top: 15px;
     }
     
-    .submit,
-    .submitnav {
-        background-color: #E45C25;
-        color: white;
-        width: 200px;
-    }
-    
-    .submit1 {
+    .submit {
         float: left;
-        margin-top: 15px;
-    }
-    
-    .submit:focus,
-    .submit:hover {
-        color: white;
     }
     /* Progress bar css */
     
@@ -1306,7 +1300,7 @@
         padding-left: 0px;
         border-bottom: none!important;
         width: 50%;
-        font-size: 13px!important;
+        font-size: 16px!important;
     }
     
     .company {
@@ -1325,7 +1319,6 @@
 </style>
 
 <script type="text/javascript">
-    
     function planSet(company) {
 
         var plans = {
@@ -1344,7 +1337,6 @@
         } catch (e) {
             return;
         }
-
         var selects, index;
         selects = document.getElementsByName("Plan");
         for (var i = 0; i < selects.length; i++) {
@@ -1362,12 +1354,12 @@
         document.getElementById('Plan').value = selects[0].value;
         document.getElementsByClassName('plan')[0].value = selects[1].value;
     }
-
     (function() {
         cur_page = parseInt(document.getElementById('page').value);
 
         var names = ['Gender', 'App Status', 'Carrier Product 2', 'Account Type', 'Plan', 'Sold Agent', 'Dental Plan', 'Dental Coverage', 'Vision Coverage'];
         var ids = ['Gender', 'AppStatus', 'CarrierProduct2', 'AccountType', 'Plan', 'SoldAgent', 'DentalPlan', 'DentalCoverage', 'VisionCoverage'];
+
         var inputs, index, name, notes, selects;
         for (var i = 0; i < names.length; i++) {
             selects = document.getElementsByName(names[i]);
@@ -1419,48 +1411,20 @@
             });
         }
 
-        function checkStatus() {
-            var selects = document.getElementsByName('Carrier Product 2');
-            if (selects[selects.length - 1].value == 'American General') {
-                return true;
-            } else
-                return false;
-        }
-
-        for (index = 9; index < 17; index++) {
-            if (index == 16) continue;
+        for (index = 1; index <= 10; index++) {
+            if (index == 3) continue;
             document.getElementById('step' + index).addEventListener('click', function(e) {
-                var id = e.target.id;
-                if (checkStatus() && (id == 'step13' || id == 'step14' || id == 'step15')) {
-                    return;
-                }
                 document.getElementsByClassName(e.target.id)[0].click();
             });
         }
-
-        document.getElementsByClassName('pre')[0].addEventListener('click', function(e) {
-            e.preventDefault();
-            if (checkStatus()) {
-                document.getElementsByClassName('step12')[0].click();
-            } else {
-                document.getElementsByClassName('step15')[0].click();
-            }
-        });
-
     })();
 
-    function cleardispo() {
-        document.getElementById('Disposition').value = "Sale";
-        // alert("Info Saved!");
-    }
-
     function save() {
-        document.getElementsByClassName('submit1')[0].click();
+        document.getElementsByClassName('submit')[0].click();
     }
 
-    function saveandemail() {
-        document.getElementsByClassName('submit')[0].click();
-        cleardispo();
+    function next() {
+        document.getElementsByClassName('next')[0].click();
     }
 
     function pre() {
