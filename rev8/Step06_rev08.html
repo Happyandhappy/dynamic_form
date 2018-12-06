@@ -60,6 +60,7 @@
                             <input type="hidden" control="input " id="DentalPlan" value="(#Dental Plan#)">
                             <input type="hidden" control="input " id="DentalCoverage" value="(#Dental Coverage#)">
                             <input type="hidden" control="input " id="VisionCoverage" value="(#Vision Coverage#)">
+                            <input type="hidden" control="input " name="SoldAgentList" id="SoldAgentList" value="(#SoldAgentList#)">
 
                             <button class="button hidden submit" id="submit">SAVE</button>
                             <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step07_rev08" value="NEXT" class="button hidden next step7">
@@ -535,13 +536,13 @@
             <div class="sidenav">
                 <div class="progress_div">
                     <ul class="progressbar" id="progressbar">
-                        <li id="step1" class="active" style="width: 8%">Greetings & Discounts</li>
+                        <li id="step1" class="active" style="width: 8%">Greetings &amp; Discounts</li>
                         <li id="step2" class="active" style="width: 9%">Basic Information</li>
-                        <li id="step3" class="active" style="width: 10%">Coverage & Needs</li>
-                        <li id="step4" class="active" style="width: 11%">Disability & Health Interview</li>
-                        <li id="step5" class="active" style="width: 12%">Features, Budget & Recap</li>
-                        <li id="step6" class="active" style="width: 12%">Choices & Close</li>
-                        <li id="step7" style="width: 11%">Information & Banking</li>
+                        <li id="step3" class="active" style="width: 10%">Coverage &amp; Needs</li>
+                        <li id="step4" class="active" style="width: 11%">Disability &amp; Health Interview</li>
+                        <li id="step5" class="active" style="width: 12%">Features, Budget &amp; Recap</li>
+                        <li id="step6" class="active" style="width: 12%">Choices &amp; Close</li>
+                        <li id="step7" style="width: 11%">Information &amp; Banking</li>
                         <li id="step8" style="width: 10%">Prep For Call</li>
                         <li id="step9" style="width: 9%">Enrollment Call</li>
                         <li id="step10" style="width: 8%">Virtual Hug</li>
@@ -1480,18 +1481,6 @@
 </style>
 
 <script type="text/javascript">
-    function setSoldAgents(){
-        var SoldAgentList = document.getElementById('SoldAgentList').value;
-        var agents = SoldAgentList.split(",");
-        selects = document.getElementsByName('Sold Agent');
-        innerHTML = "";
-        for (i = 0 ; i < agents.length; i++){
-            innerHTML += "<option value='" + agents[i] + "'>" + agents[i] + "</option>";
-        }
-        for (i = 0; i < selects.length; i++){
-            selects[i].innerHTML = innerHTML;
-        }
-    }
     
     function hideTags() {
         var names = ['rna', 'balt', 'lbl', 'amer', 'west'];
@@ -1553,10 +1542,29 @@
             document.getElementsByClassName('west')[0].style.display = 'block';
         }
     }
+    
+    function setSoldAgents(){
+        var SoldAgentList = document.getElementById('SoldAgentList').value;
+        var agents = SoldAgentList.split(",");
+        selects = document.getElementsByName('Sold Agent');
+        
+        innerHTML = '<option value="(#Sold Agent#)" selected="" hidden="">(#Sold Agent#)</option>';
+        for (i = 0 ; i < agents.length; i++){
+            innerHTML += "<option value='" + agents[i] + "'>" + agents[i] + "</option>";
+        }
+        for (i = 0; i < selects.length; i++){
+            selects[i].innerHTML = innerHTML;
+        }
+    }
 
+    
+    
     (function() {
+        setSoldAgents();
         cur_page = parseInt(document.getElementById('page').value);
         hideTags();
+        
+        
         var names = ['Gender', 'App Status', 'Carrier Product 2', 'Account Type', 'Plan', 'Sold Agent', 'Dental Plan', 'Dental Coverage', 'Vision Coverage'];
         var ids = ['Gender', 'AppStatus', 'CarrierProduct2', 'AccountType', 'Plan', 'SoldAgent', 'DentalPlan', 'DentalCoverage', 'VisionCoverage'];
 
@@ -1617,19 +1625,29 @@
 
         function checkStatus() {
             var selects = document.getElementsByName('Carrier Product 2');
-            if (selects[selects.length - 1].value == 'American General') {
+            if (selects[selects.length - 1].value == 'American General'|| selects[selects.length - 1].value == 'Great Western') {
                 return true;
             } else
                 return false;
         }
-
+        
         for (index = 1; index <= 10; index++) {
             if (index == 6) continue;
             document.getElementById('step' + index).addEventListener('click', function(e) {
-                document.getElementsByClassName(e.target.id)[0].click();
+                id = e.target.id;
+                if (checkStatus() && id == 'step9'){
+                    return;
+                }
+                else if (id=='step7' && document.getElementsByName('Carrier Product 2')[0].value=="Select One" || document.getElementsByName('Carrier Product 2')[0].value=="")
+                {   
+                    document.getElementsByName('Carrier Product 2')[2].style.border = "solid 1px #FF0000";
+                }
+                else{
+                    document.getElementsByClassName(e.target.id)[0].click();
+                }
             });
         }
-
+     
     })();
 
     function save() {
@@ -1647,5 +1665,5 @@
     
     function pre() {
         document.getElementsByClassName('pre')[0].click();
-    }  
+    }
 </script>

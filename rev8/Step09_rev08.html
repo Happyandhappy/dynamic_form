@@ -2576,7 +2576,7 @@
 </style>
 
 <script type="text/javascript">
-    
+     
     function hideTags() {
         var names = ['rna', 'balt', 'lbl']; //, 'amer'
         for (var i = 0; i < names.length; i++) {
@@ -2630,18 +2630,12 @@
             document.getElementsByClassName('amer')[0].style.display = 'block';
         }
     }
-    function checkStatus() {
-        var selects = document.getElementsByName('Carrier Product 2');
-        if (selects[selects.length - 1].value == 'American General') {
-            return true;
-        } else
-            return false;
-    }
+
     function setSoldAgents(){
         var SoldAgentList = document.getElementById('SoldAgentList').value;
         var agents = SoldAgentList.split(",");
         selects = document.getElementsByName('Sold Agent');
-        innerHTML = "";
+        innerHTML = '<option value="(#Sold Agent#)" selected="" hidden="">(#Sold Agent#)</option>';
         for (i = 0 ; i < agents.length; i++){
             innerHTML += "<option value='" + agents[i] + "'>" + agents[i] + "</option>";
         }

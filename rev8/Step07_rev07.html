@@ -1897,7 +1897,8 @@
         var SoldAgentList = document.getElementById('SoldAgentList').value;
         var agents = SoldAgentList.split(",");
         selects = document.getElementsByName('Sold Agent');
-        innerHTML = "";
+        
+        innerHTML = '<option value="(#Sold Agent#)" selected="" hidden="">(#Sold Agent#)</option>';
         for (i = 0 ; i < agents.length; i++){
             innerHTML += "<option value='" + agents[i] + "'>" + agents[i] + "</option>";
         }
@@ -1965,7 +1966,7 @@
 
         function checkStatus() {
             var selects = document.getElementsByName('Carrier Product 2');
-            if (selects[selects.length - 1].value == 'American General') {
+            if (selects[selects.length - 1].value == 'American General'|| selects[selects.length - 1].value == 'Great Western') {
                 return true;
             } else
                 return false;
@@ -1973,7 +1974,11 @@
 
         for (index = 1; index <= 10; index++) {
             if (index == 7) continue;
-            document.getElementById('step' + index).addEventListener('click', function(e) {                
+            document.getElementById('step' + index).addEventListener('click', function(e) {
+                id = e.target.id;
+                if (checkStatus() && id == 'step9'){
+                    return;
+                }
                 document.getElementsByClassName(e.target.id)[0].click();
             });
         }

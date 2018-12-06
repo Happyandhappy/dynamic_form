@@ -59,18 +59,18 @@
                             <input type="hidden" control="input " id="DentalPlan" value="(#Dental Plan#)">
                             <input type="hidden" control="input " id="DentalCoverage" value="(#Dental Coverage#)">
                             <input type="hidden" control="input " id="VisionCoverage" value="(#Vision Coverage#)">
+                            <input type="hidden" control="input " name="SoldAgentList" id="SoldAgentList" value="Amanda Tompkins,Barry Lyons,Colter Steklein,Courtney Strobec,Elizabeth Overstreet,Janice Adams,Jordan Barrett,Josh Bowers,Justin York,Kelly Tomlinson,Lisa Soto,Lynn Sperry,Mark Ross,Mason Jackson,Matt Hook,Melanie Montgomery,Michael Montes,Mike Grasso,Mike Stolp,Napolian Sopon,Sessalie Chambuso,Willie Stephens">
 
                             <button class="button hidden submit" id="submit">SAVE</button>
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step03_rev07" value="NEXT" class="button next hidden step3">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step01_rev07" value="PREVIOUS" class="button hidden pre step1">
-                            <!--<input type="submit" control="submit" action="submit_and_navigate" navigate-to="step03_rev07" value="step3_rev07" class="button hidden step3">-->
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step04_rev07" value="step4" class="button hidden step4">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step05_rev07" value="step5" class="button hidden step5">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step06_rev07" value="step6" class="button hidden step6">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step07_rev07" value="step7" class="button hidden step7">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step08_rev07" value="step8" class="button hidden step8">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step09_rev07" value="step9" class="button hidden step9">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step10_rev07" value="step10" class="button hidden step10">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step02_rev08" value="NEXT" class="button next hidden step2">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step03_rev08" value="step3" class="button hidden step3">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step04_rev08" value="step4" class="button hidden step4">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step05_rev08" value="step5" class="button hidden step5">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step06_rev08" value="step6" class="button hidden step6">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step07_rev08" value="step7" class="button hidden step7">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step08_rev08" value="step8" class="button hidden step8">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step09_rev08" value="step9" class="button hidden step9">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step10_rev08" value="step10" class="button hidden step10">
 
                             <div class="col-sm-12 ">
                                 <div class="col-sm-12 title " id="">
@@ -108,28 +108,6 @@
                                         <select name="Sold Agent" value="(#Sold Agent#)" class="form-control">
                                             <!--<option value="" selected="" disabled="">Select One</option>-->
                                             <option value="(#Sold Agent#)" selected="" hidden="">(#Sold Agent#)</option>
-                                            <option>Amanda Tompkins</option>
-                                            <option>Barry Lyons</option>
-                                            <option>Colter Steklein</option>
-                                            <option>Courtney Strobeck</option>
-                                            <option>Elizabeth Overstreet</option>
-                                            <option>Janice Adams</option>
-                                            <option>Jordan Barrett</option>
-                                            <option>Josh Bowers</option>
-                                            <option>Justin York</option>
-                                            <option>Kelly Tomlinson</option>
-                                            <option>Lisa Soto</option>
-                                            <option>Lynn Sperry</option>
-                                            <option>Mark Ross</option>
-                                            <option>Mason Jackson</option>
-                                            <option>Matt Hook</option>
-                                            <option>Melanie Montgomery</option>
-                                            <option>Michael Montes</option>
-                                            <option>Mike Grasso</option>
-                                            <option>Mike Stolp</option>
-                                            <option>Napolian Sopon</option>
-                                            <option>Sessalie Chambuso</option>
-                                            <option>Willie Stephens</option>
                                         </select>
                                         <!-- <input type="text" control="input " class="form-control" field-name="Sold Agent" name="Sold Agent" value="(#Sold Agent#)"> -->
                                     </div>
@@ -308,7 +286,7 @@
                                             <option value="Baltimore Life">Baltimore Life</option>
                                             <option value="Liberty Bankers Life">Liberty Bankers Life</option>
                                             <option value="American General">American General</option>
-                                            <!--<option value="Great Western">Great Western</option>-->
+                                            <option value="Great Western">Great Western</option>
                                             <!--<option value="Foresters">Foresters</option>-->
                                             <!--<option value="Prosperity">Prosperity</option>-->
                                             <!--<option value="5Star Life">5Star Life</option>-->
@@ -524,7 +502,6 @@
                                 </div>
                             </div>
                             <!-- end section 2 -->
-
                         </form>
                     </div>
                 </div>
@@ -534,81 +511,188 @@
             <div class="sidenav">
                 <div class="progress_div">
                     <ul class="progressbar" id="progressbar">
-                        <li id="step1" class="active" style="width: 8%">GREETING</li>
-                        <li id="step2" class="active" style="width: 9%">DISCOUNT QUESTIONS</li>
-                        <li id="step3" style="width: 10%">GATHER BASIC INFORMATION</li>
-                        <li id="step4" style="width: 11%">CURRENT INSURANCE</li>
-                        <li id="step5" style="width: 12%">NEEDS AND COVERAGE AMOUNTS</li>
-                        <li id="step6" style="width: 12%">DISABILITY &amp; HEALTH INTERVIEW</li>
-                        <li id="step7" style="width: 11%">IMPORTANT FEATURES</li>
-                        <li id="step8" style="width: 10%">BUDGET RANGE</li>
-                        <li id="step9" style="width: 9%">RECAP</li>
-                        <li id="step10" style="width: 8%">GO RUN THE CHOICES</li>
+                        <li id="step1" class="active" style="width: 8%">Greetings &amp; Discounts</li>
+                        <li id="step2" style="width: 9%">Basic Information</li>
+                        <li id="step3" style="width: 10%">Coverage &amp; Needs</li>
+                        <li id="step4" style="width: 11%">Disability &amp; Health Interview</li>
+                        <li id="step5" style="width: 12%">Features, Budget &amp; Recap</li>
+                        <li id="step6" style="width: 12%">Choices &amp; Close</li>
+                        <li id="step7" style="width: 11%">Information &amp; Banking</li>
+                        <li id="step8" style="width: 10%">Prep For Call</li>
+                        <li id="step9" style="width: 9%">Enrollment Call</li>
+                        <li id="step10" style="width: 8%">Virtual Hug</li>
                     </ul>
                 </div>
                 <div class="bar_top"></div>
                 <div class="col-sm-12 rightbody">
-                    <h4>DISCOUNT QUESTIONS</h4>
-                    <p>
-                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Alright (#Preferred Name#), now first things first, I need to ask you a couple of quick questions to see if you qualify for any of the discounts that you may be entitled to:</span>
-                    </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
-                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
-                    </p>
-                    <p>
-                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Have you used electronic cigarettes, tobacco or any other nicotine products in the past 12 months?</span>
-                    </p>
-                    <p style="padding:0;">
-                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
-                    </p>
-                    <p style="padding:0px 0px 0px 25px;">
-                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Tobacco Use:</strong> 
-                           <!--<select name="Tobacco Use" value="(#Tobacco Use#)">-->
-                           <!--     <option value="Yes">Yes</option>-->
-                           <!--     <option value="No">No</option>-->
-                           <!-- </select>-->
-                             <input type="text" control="input " field-name="Tobacco Use" name="Tobacco Use" value="(#Tobacco Use#)">          
-                            </span>
-                    </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Do you participate in any hazardous activities like skydiving, bull riding or anything like that?</span>
-                    </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
-                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
-                    </p>
-                    <p>
-                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Now (#Preferred Name#), most of the companies that I work with offer some really deep discounts based on how you would be able to set up your monthly premium payments. If we can get you approved for something that you are comfortable with, and that meets your needs, do you have an active checking or savings account with a bank or credit union that you can use to pay your premium each month?</span>
-                    </p>
-                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
-                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
-                    </p>
-                    <div class="notes">
-                        <p style="padding:10px 0px 10px 25px">
-                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
-                                    &nbsp;<strong>Select Account Type:</strong>
-                                    <select field-name="Account Type" name="Account Type">
-                                        <option value="(#Account Type#)" selected="" hidden="">(#Account Type#)</option>
-                                        <option value="Checking">Checking</option>
-                                        <option value="Saving">Saving</option>
-                                        <!---<option value="Direct Express">Direct Express</option>-->
-                                        <!---<option value="Credit Debit">Credit Debit</option>-->
-                                    </select>
+                    <div id="greeting">
+                        <h4>GREETING - LEAD SOURCE - (#LeadSource#)</h4>
+                        <p></p>
+                        <p style="padding:0;">
+                            <span style="color:#ff0000;font-weight:700">Facebook:</span>
+                            <span>Hi, is this (#FirstName#)? Hi (#FirstName#), my name is </span>
+                            <span style="font-weight:700">(#Rep#). </span>
+                            <span>How are you doing today? Good! You recently requested information on Facebook regarding the state regulated senior programs available to you in (#State#) for burial coverage. During that initial phone call you set up a security question with us, you said your favorite </span>
+                            <span style="font-weight:700">hobby/color</span>
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-style:normal">was (#Hobbycolor#) so you would know it was the right people calling you back, is that correct? Ok, good. So, I'm the one that's been assigned your file and will be working with you. It's a pleasure to speak with you today. Is this coverage for yourself or someone else? Ok perfect now let me gather some basic information to get started.</span>
+                        </p>
+                        <p></p>
+
+                        <p style="padding:10px 0;">
+                            <span style="color:#ff0000;font-weight:700">CC4:</span>
+                            <span>Hi, is this (#FirstName#)? Hi (#FirstName#), my name is </span>
+                            <span style="font-weight:700">(#Rep#). </span>
+                            <span>How are you doing today? Good! You recently spoke with one of my associates regarding the state regulated senior programs available to you in (#State#) for burial coverage. During that initial phone call you set up a security question with us, you said your favorite </span>
+                            <span style="font-weight:700">hobby/color</span>
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-style:normal">was (#Hobbycolor#) so you would know it was the right people calling you back, is that correct? Ok, good. So, I'm the one you are supposed to be working with and it's a pleasure to speak with you today. Is this coverage for yourself or someone else? Ok perfect now let me gather some basic information to get started.</span>
+                        </p>
+                        <p></p>
+                        <p></p>
+                        <p style="padding:10px 30px;">
+                            <span><strong>For them or Loved one:</strong>
+                                    <input type="text" control="input " field-name="Desired Coverage" name="Desired Coverage" value="(#Desired Coverage#)">
                                 </span>
                         </p>
-                        <p style="padding-left:30px;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                            <span style="font-size:12pt;color:#ff0000;font-style: italic;"><strong>NOTE:</strong> If they say they have a savings account, ask if they have used that account before for auto-drafts.</span>
-                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
+                        <p style="padding:0;">
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:italic;">
+                                <strong>NOTE:</strong>The favorite hobby question is a great opportunity to connect and start the bonding process - Make a friend make a sale! Be prepared to overcome early objection
+                                </span>
+                        </p>
+                        <p style="padding:10px 30px 0px 30px;">
+                            <span>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>*** Preferred Name:</strong> <input type="text" control="input " field-name="Preferred Name" name="Preferred Name" value="(#Preferred Name#)"> 
+                                </span>
+                        </p>
+                        <p style="padding:0px 30px 0px 30px;">
+                            <span>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Client Name: </strong>
+                                    <input type="text" control="input " field-name="FirstName" name="FirstName" value="(#FirstName#)"> 
+                                    <input type="text" control="input " field-name="LastName" name="LastName" value="(#LastName#)"> 
+                                </span>
+                        </p>
+                        <p style="padding:0px 30px 0px 30px;">
+                            <span>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Hobby/Color:</strong>
+                                    <input type="text" control="input " field-name="Hobbycolor" name="Hobbycolor" value="(#Hobbycolor#)">
+                                </span>
+                        </p>
+                        <p style="padding:0px 30px 0px 30px;">
+                            <span>
+                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <strong>Resident State:</strong> 
+                                <input type="text" control="input " field-name="State" name="State" value="(#State#)">
+                            </span>
+                        </p>
+                        <p style="padding:0px 30px 0px 30px;">
+                            <span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <strong>Age of Insured:</strong> 
+                                <input type="text" name="Age" value="(#Age#)">
+                            </span>
+                        </p>
+                        <p style="padding:0px 30px 0px 30px;">
+                            <span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <strong>Gender of Insured:</strong>
+                                <select field-name="Gender" name="Gender">
+                                    <!--<option value="" selected="" disabled="">Select One</option>-->
+                                    <option value="(#Gender#)" selected="" hidden="">(#Gender#)</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </span>
+                        </p>
+                        <p style="padding-top:5px;">
+                            <span>
+                                <strong>Notes:</strong> <br>
+                                <textarea field-name="Notes " name="Notes">(#Notes#)</textarea>
+                            </span>
+                        </p>
+                        <p style="padding:0">
+                            <span>
+                                Now (#Preferred Name#), one of the most common needs my customers have is to make sure that when their time comes, they’re not leaving a big financial burden for their loved ones, is that how you feel? Okay, well that is exactly what we do. I help people just like you, every day, take this burden off of their family and ensure that their final wishes are met. 
+                            </span>
+                        </p>
+                        <p style="padding:0;margin:0;color:#000000;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">            
+                            </span>
+                        </p>
+                        <p style="padding:0;">
+                            <span>Now, before we get started, I want you to know who you are on the phone with. My name is 
+                                </span>
+                            <span style="font-weight:700">(#Rep#),</span>
+                            <span>and I am a</span>
+                            <span style="font-style:italic">Senior Benefits Advocate</span>.
+                            <span> I work here in our final expense department. I am also the licensed field underwriter who is going to determine which one of the state regulated programs you qualify for, and I’m going to help you put that coverage in place </span>
+                            <span style="font-weight:700">today</span>.
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-style:normal">This is an EASY three step process, and as your advocate I will be with you through every step!</span>
+                        </p>
+                    </div>
+                    <div class="divider"></div>
+                    <div id="discount">
+                        <h4>DISCOUNT QUESTIONS</h4>
+                        <p>
+                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Alright (#Preferred Name#), now first things first, I need to ask you a couple of quick questions to see if you qualify for any of the discounts that you may be entitled to:</span>
                         </p>
                         <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
-                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:  normal"></span>
+                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
                         </p>
+                        <p>
+                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Have you used electronic cigarettes, tobacco or any other nicotine products in the past 12 months?</span>
+                        </p>
+                        <p style="padding:0;">
+                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                        </p>
+                        <p style="padding:0px 0px 0px 25px;">
+                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Tobacco Use:</strong> 
+                               <!--<select name="Tobacco Use" value="(#Tobacco Use#)">-->
+                               <!--     <option value="Yes">Yes</option>-->
+                               <!--     <option value="No">No</option>-->
+                               <!-- </select>-->
+                                 <input type="text" control="input " field-name="Tobacco Use" name="Tobacco Use" value="(#Tobacco Use#)">          
+                                </span>
+                        </p>
+                        <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Do you participate in any hazardous activities like skydiving, bull riding or anything like that?
+                            </span>
+                        </p>
+                        <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                        </p>
+                        <p>
+                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Now (#Preferred Name#), most of the companies that I work with offer some really deep discounts based on how you would be able to set up your monthly premium payments. If we can get you approved for something that you are comfortable with, and that meets your needs, do you have an active checking or savings account with a bank or credit union that you can use to pay your premium each month?</span>
+                        </p>
+                        <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                        </p>
+                        <div class="notes">
+                            <p style="padding:10px 0px 10px 25px">
+                                <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                        &nbsp;<strong>Select Account Type:</strong>
+                                        <select field-name="Account Type" name="Account Type">
+                                            <option value="(#Account Type#)" selected="" hidden="">(#Account Type#)</option>
+                                            <option value="Checking">Checking</option>
+                                            <option value="Saving">Saving</option>
+                                            <!---<option value="Direct Express">Direct Express</option>-->
+                                            <!---<option value="Credit Debit">Credit Debit</option>-->
+                                        </select>
+                                    </span>
+                            </p>
+                            <p style="padding-left:30px;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                                <span style="font-size:12pt;color:#ff0000;font-style: italic;"><strong>NOTE:</strong> If they say they have a savings account, ask if they have used that account before for auto-drafts.</span>
+                                <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
+                            </p>
+                            <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                                <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:  normal"></span>
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div class="bar_bottom">
                     <a class="btn button submit" onclick="save();">SAVE</a>
                     <a class="btn button next" onclick="next();">NEXT</a>
-                    <a class="btn button pre" onclick="pre();">PREVIOUS</a>
                 </div>
             </div>
         </div>
@@ -616,7 +700,6 @@
 </body>
 
 </html>
-
 
 <style type="text/css">
     #content > .rightSide > .sidenav > .rightbody {
@@ -1267,6 +1350,9 @@
     .col-sm-3 {
         /*margin-top: 10px;*/
     }
+    .divider{
+        height: 20px;
+    }
 </style>
 
 <script type="text/javascript">
@@ -1288,25 +1374,45 @@
         } catch (e) {
             return;
         }
+        var planValue = document.getElementById('Plan').value;
+
+
         var selects, index;
         selects = document.getElementsByName("Plan");
         for (var i = 0; i < selects.length; i++) {
             selects[i].innerHTML = "";
             var html = "";
             if (selects[i].className == "plan") continue;
+
             for (var j = 0; j < plans[company].length; j++) {
-                if (j == 0 || plans[company][j] == document.getElementById('Plan').value)
+                if (j == 0 || plans[company][j] == planValue)
                     html += "<option value='" + plans[company][j] + "' selected=''>" + plans[company][j] + "</option>";
                 else
                     html += "<option value='" + plans[company][j] + "'>" + plans[company][j] + "</option>";
             }
             selects[i].innerHTML = html;
         }
-        document.getElementById('Plan').value = selects[0].value;
+        document.getElementById('Plan').value = selects[1].value;
         document.getElementsByClassName('plan')[0].value = selects[1].value;
     }
 
+    function setSoldAgents(){
+        var SoldAgentList = document.getElementById('SoldAgentList').value;
+        var agents = SoldAgentList.split(",");
+        selects = document.getElementsByName('Sold Agent');
+        innerHTML = '<option value="(#Sold Agent#)" selected="" hidden="">(#Sold Agent#)</option>';
+        
+        for (i = 0 ; i < agents.length; i++){
+            innerHTML += "<option value='" + agents[i] + "'>" + agents[i] + "</option>";
+        }
+        for (i = 0; i < selects.length; i++){
+            selects[i].innerHTML = innerHTML;
+        }
+    }
+    
     (function() {
+
+        setSoldAgents();
         cur_page = parseInt(document.getElementById('page').value);
 
         var names = ['Gender', 'App Status', 'Carrier Product 2', 'Account Type', 'Plan', 'Sold Agent', 'Dental Plan', 'Dental Coverage', 'Vision Coverage'];
@@ -1315,10 +1421,18 @@
         var inputs, index, name, notes, selects;
         for (var i = 0; i < names.length; i++) {
             selects = document.getElementsByName(names[i]);
+
+            var selectValue = document.getElementById(ids[i]).value;            
+            //if (names[i]=="Carrier Product 2" && selectValue == "")
+                //selectValue = "Royal Neighbors of America";
+
             for (index = 0; index < selects.length; index++) {
-                    selects[index].value = document.getElementById(ids[i]).value;
+                if (selectValue !="")
+                    selects[index].value = selectValue;
+                else
+                    selects[index].selectedIndex = 0;
             }
-            if (names[i] == "Carrier Product 2") planSet(document.getElementById(ids[i]).value);
+            if (names[i] == "Carrier Product 2") planSet(selectValue);
         }
 
         inputs = document.getElementsByTagName('input');
@@ -1363,7 +1477,7 @@
         }
 
         for (index = 1; index <= 10; index++) {
-            if (index == 2) continue;
+            if (index == 1) continue;
             document.getElementById('step' + index).addEventListener('click', function(e) {
                 document.getElementsByClassName(e.target.id)[0].click();
             });
@@ -1376,9 +1490,5 @@
 
     function next() {
         document.getElementsByClassName('next')[0].click();
-    }
-
-    function pre() {
-        document.getElementsByClassName('pre')[0].click();
-    }
+    }  
 </script>

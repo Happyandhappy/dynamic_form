@@ -47,8 +47,7 @@
                             </div>
                         </div>
                         <form control="form" class="dynamic-form" id="form">
-
-                            <input type="hidden" name="page" id="page" value="8">
+                            <input type="hidden" name="page" id="page" value="16">
                             <input type="hidden" name="axisy" id="axisy" value="(#axisy#)">
                             <input name="disposition" id="Disposition" type="hidden" value="">
                             <input type="hidden" control="input " field-name="email_selected" name="email_selected" value="(#email_selected#)">
@@ -61,17 +60,20 @@
                             <input type="hidden" control="input " id="DentalPlan" value="(#Dental Plan#)">
                             <input type="hidden" control="input " id="DentalCoverage" value="(#Dental Coverage#)">
                             <input type="hidden" control="input " id="VisionCoverage" value="(#Vision Coverage#)">
+                            <input type="hidden" control="input " name="SoldAgentList" id="SoldAgentList" value="(#SoldAgentList#)">
 
-                            <button class="button hidden submit" id="submit">SAVE</button>
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step09_rev07" value="NEXT" class="button hidden next step9">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step07_rev07" value="PREVIOUS" class="button hidden pre step7">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step01_rev07" value="step1" class="button hidden step1">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step02_rev07" value="step2" class="button hidden step2">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step03_rev07" value="step3" class="button hidden step3">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step04_rev07" value="step4" class="button hidden step4">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step05_rev07" value="step5" class="button hidden step5">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step06_rev07" value="step6" class="button hidden step6">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step10_rev07" value="step10" class="button hidden step10">
+                            <button class="button hidden submit1" id="submit">SAVE</button>
+                            <input type="submit" control="submit" action="submit_and_email_template" email-to="Email" email-template="(#email_selected#)" value="Submit and Email" class="button hidden submit">
+                            <button id="pre" class="button hidden pre">PREVIOUS</button>
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step09_rev08" value="PREVIOUS" class="button hidden step9">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step01_rev08" value="step1" class="button hidden step1">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step02_rev08" value="step2" class="button hidden step2">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step03_rev08" value="step3" class="button hidden step3">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step04_rev08" value="step4" class="button hidden step4">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step05_rev08" value="step5" class="button hidden step5">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step06_rev08" value="step6" class="button hidden step6">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step07_rev08" value="step7" class="button hidden step7">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step08_rev08" value="step8" class="button hidden step8">
 
                             <div class="col-sm-12 ">
                                 <div class="col-sm-12 title " id="">
@@ -309,7 +311,7 @@
                                             <option value="Baltimore Life">Baltimore Life</option>
                                             <option value="Liberty Bankers Life">Liberty Bankers Life</option>
                                             <option value="American General">American General</option>
-                                            <!--<option value="Great Western">Great Western</option>-->
+                                            <option value="Great Western">Great Western</option>
                                             <!--<option value="Foresters">Foresters</option>-->
                                             <!--<option value="Prosperity">Prosperity</option>-->
                                             <!--<option value="5Star Life">5Star Life</option>-->
@@ -535,52 +537,129 @@
             <div class="sidenav">
                 <div class="progress_div">
                     <ul class="progressbar" id="progressbar">
-                        <li id="step1" class="active" style="width: 8%">GREETING</li>
-                        <li id="step2" class="active" style="width: 9%">DISCOUNT QUESTIONS</li>
-                        <li id="step3" class="active" style="width: 10%">GATHER BASIC INFORMATION</li>
-                        <li id="step4" class="active" style="width: 11%">CURRENT INSURANCE</li>
-                        <li id="step5" class="active" style="width: 12%">NEEDS AND COVERAGE AMOUNTS</li>
-                        <li id="step6" class="active" style="width: 12%">DISABILITY &amp; HEALTH INTERVIEW</li>
-                        <li id="step7" class="active" style="width: 11%">IMPORTANT FEATURES</li>
-                        <li id="step8" class="active" style="width: 10%">BUDGET RANGE</li>
-                        <li id="step9" style="width: 9%">RECAP</li>
-                        <li id="step10" style="width: 8%">GO RUN THE CHOICES</li>
+                        <li id="step1" class="active" style="width: 8%">Greetings &amp; Discounts</li>
+                        <li id="step2" class="active" style="width: 9%">Basic Information</li>
+                        <li id="step3" class="active" style="width: 10%">Coverage &amp; Needs</li>
+                        <li id="step4" class="active" style="width: 11%">Disability &amp; Health Interview</li>
+                        <li id="step5" class="active" style="width: 12%">Features, Budget &amp; Recap</li>
+                        <li id="step6" class="active" style="width: 12%">Choices &amp; Close</li>
+                        <li id="step7" class="active" style="width: 11%">Information &amp; Banking</li>
+                        <li id="step8" class="active" style="width: 10%">Prep For Call</li>
+                        <li id="step9" class="active" style="width: 9%">Enrollment Call</li>
+                        <li id="step10" class="active" style="width: 8%">Virtual Hug</li>
                     </ul>
-
                 </div>
                 <div class="bar_top"></div>
                 <div class="col-sm-12 rightbody">
-                    <h4>BUDGET RANGE</h4>
+                    <h4>AFTER CALL VIRTUAL HUG</h4>
                     <p></p>
                     <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">OK now (#Preferred Name#), we talked earlier about looking at somewhere between $10,000 and $20,000 dollars in coverage and when we look at those amounts for people with your health profile and in your age group we are usually talking about a range of $60 to $100 per month. </span>
+                        <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                            <strong>Application Status:</strong>            
+                            <select field-name="App Status" class="form-control" name="App Status">
+                                <option value="(#App Status#)" selected="" hidden="">(#App Status#)</option>
+                                <!--<option value="" selected="" disabled="">Select One</option>-->
+                                <option value="Approved">Approved</option>
+                                <option value="Declined">Declined</option>
+                                <option value="Pending">Pending</option>
+                            </select>
+                        </span>
                     </p>
-                    <p style="padding-top:10px;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                        <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:italic;">
-                            <strong>NOTE: </strong>Read and react to your client. If this does not work for your client read the statement below.</span>
-                    </p>
-                    <p style="padding-top:10px;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Ok so if that doesn't work for you let's not talk about what can't do but let's focus on what you can do. So how much would comfortable for you to put towards a plan that is going to protect your family like this? </span>
+                    <br>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Okay (#Preferred Name#), great job! We got you approved for that coverage! So, as you can see, this is a thorough process and this is real coverage, and despite some of your health conditions, we were able to get you covered, so never let this policy lapse. Now let me tell you what is going to happen next:</span>
                     </p>
                     <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
-                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
-                    </p>
-                    <p style="padding: 0px 0px 10px 30px">
-                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
-                                <strong>Budget range:</strong>
-                                <input type="text" control="input " field-name="Budget" name="Budget" value="(#Budget#)">
-                            </span>
+                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
                     </p>
                     <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Okay, great. That gives me a starting point. Now I'm going to send your information to our providers and get their best offers back,specifically for you and your needs.</span>
+                        <span style="font-size:12pt;color:#ff0000;font-weight:700">*IF NO EMAIL*</span>
+                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">You will receive a packet in the mail in 10-14 days and it will have more about the plan we chose and my business card. Now, you’re going to receive your policy in the mail from (#Carrier Product 2#) in around 10-14 days. I am putting you on my calendar for a call back around that same time to make sure you received your policy and to answer any questions you may have. I really enjoyed working on this with you today! You are a great person to talk to! If you ever need me or have any questions, do not hesitate to call me, okay? And if you know of anyone looking for coverage like this, send them my way! If they write with me, I will send you a gift card for $25!</span>
+                    </p>
+                    <br>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="font-size:12pt;color:#ff0000;font-weight:700">Disconnect with the Client, schedule an ASR call on your Google Calender, submit your sales report and disposition as SALE! Now move to the next call!</span>
+                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
                     </p>
                     <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
-                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal"></span>
                     </p>
+                    <br>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="font-size:12pt;color:#ff0000;font-weight:700">*IF EMAIL*</span>
+                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal"></span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="font-size:12pt;color:#ff0000;font-weight:700">*If they have an email send them the Dynamic Insurance email from the canned responses in your gmail.</span>
+                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal"></span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Okay, so, I told you that you would get an Email from me, go ahead and see if it is in there. The subject line should say “DYNAMIC INSURANCE SERVICES - (#Preferred Name#)”. Do you see it? Okay, good, go ahead and open that for me. Okay, now in the Email, you will find some links for you to explore. The first one will take you to your new insurance company, 
+                        <select field-name="Carrier Product 2" name="Carrier Product 2">
+                            <option value="Royal Neighbors of America">Royal Neighbors of America</option>
+                            <option value="Baltimore Life">Baltimore Life</option>
+                            <option value="Liberty Bankers Life">Liberty Bankers Life</option>
+                            <option value="American General">American General</option>
+                            <option value="Great Western">Great Western</option>
+                            <!--<option value="Foresters">Foresters</option>-->
+                            <!--<option value="Prosperity">Prosperity</option>-->
+                            <!--<option value="5Star Life">5Star Life</option>-->
+                        </select>
+                        <select field-name="Plan" name="Plan">
+                        </select>
+                        . The second one will take you to our company website. When you get a chance, go explore both of those links with your family so they can see exactly who you’ve got working for you. Now, the third link in the Email should say “YOUR SENIOR BENEFITS ADVOCATE - (#Sold Agent#). Do you see that one? Ok, great! Go ahead and click on that one and let me know what you see.</span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">*They will comment on seeing your picture </span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                        <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                            Yes, that’s me! I wanted you to be able to put a face with a voice. Now, under my picture, you should see one more link that says “DID YOU HAVE A GREAT EXPERIENCE WITH AND WANT US TO KNOW ABOUT IT?” Do you see that link (#Preferred Name#)? Okay good, go ahead and click on that for me. It should take you to our Facebook page. We are a family owned and operated Senior Benefits Advocacy Group, and being small allows us to work with our clients on a level that most of these much bigger companies just can’t or won’t do. However, being small, it’s also hard for people to find us. So what we’ve learned is that when our clients take the time to leave us a review here on Facebook, it makes sure that more people see our company, and we get the opportunity to help more people. So, if you would just take 4 or 5 minutes, and write 2 or 3 sentences about your experience working with us today, it would mean the world to our company. Okay?
+                        </span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Thank you so much! </span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                            And lastly you will receive your policy in the mail from (#Carrier Product 2#) in around 10-14 days. I am putting you on my calendar for a call back around that same time to make sure you received your policy and to answer any questions you may have. I really enjoyed working on this with you today! You are a great person to talk to! If you ever need me or have any questions, do not hesitate to call me, okay? And if you know of anyone looking for coverage like this, send them my way! If they write with me, I will send you a gift card for $25!
+                        </span>
+                    </p>
+                    <br>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="font-size:12pt;color:#ff0000;font-weight:700">Disconnect with the client, schedule an ASR call on your Google calender, submit your sales report and CLICK THE SUBMIT AND EMAIL BUTTON BELOW. This sends your client a welcome kit and dispositions them as a SALE! Now move to the next call!</span>
+                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                        <span style="font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal"></span>
+                    </p>
+                    <br>
+                    <br>
                 </div>
                 <div class="bar_bottom">
-                    <a class="btn button submit" onclick="save();">SAVE</a>
-                    <a class="btn button next" onclick="next();">NEXT</a>
+                    <a class="btn button submit1" onclick="save();">SAVE</a>
+                    <a class="btn button submit" onclick="saveandemail();">Submit and Email</a>
                     <a class="btn button pre" onclick="pre();">PREVIOUS</a>
                 </div>
             </div>
@@ -1102,8 +1181,21 @@
         margin-top: 15px;
     }
     
-    .submit {
+    .submit,
+    .submitnav {
+        background-color: #E45C25;
+        color: white;
+        width: 200px;
+    }
+    
+    .submit1 {
         float: left;
+        margin-top: 15px;
+    }
+    
+    .submit:focus,
+    .submit:hover {
+        color: white;
     }
     /* Progress bar css */
     
@@ -1219,7 +1311,7 @@
         padding-left: 0px;
         border-bottom: none!important;
         width: 50%;
-        font-size: 16px!important;
+        font-size: 13px!important;
     }
     
     .company {
@@ -1238,7 +1330,7 @@
 </style>
 
 <script type="text/javascript">
-    
+   
     function planSet(company) {
 
         var plans = {
@@ -1257,6 +1349,7 @@
         } catch (e) {
             return;
         }
+
         var selects, index;
         selects = document.getElementsByName("Plan");
         for (var i = 0; i < selects.length; i++) {
@@ -1274,6 +1367,7 @@
         document.getElementById('Plan').value = selects[0].value;
         document.getElementsByClassName('plan')[0].value = selects[1].value;
     }
+
     function setSoldAgents(){
         var SoldAgentList = document.getElementById('SoldAgentList').value;
         var agents = SoldAgentList.split(",");
@@ -1286,22 +1380,16 @@
             selects[i].innerHTML = innerHTML;
         }
     }
-
-    function checkStatus() {
-        var selects = document.getElementsByName('Carrier Product 2');
-        if (selects[selects.length - 1].value == 'American General') {
-            return true;
-        } else
-            return false;
-    }
-        
+    
+    
     (function() {
+        
         setSoldAgents();
+        
         cur_page = parseInt(document.getElementById('page').value);
 
         var names = ['Gender', 'App Status', 'Carrier Product 2', 'Account Type', 'Plan', 'Sold Agent', 'Dental Plan', 'Dental Coverage', 'Vision Coverage'];
         var ids = ['Gender', 'AppStatus', 'CarrierProduct2', 'AccountType', 'Plan', 'SoldAgent', 'DentalPlan', 'DentalCoverage', 'VisionCoverage'];
-
         var inputs, index, name, notes, selects;
         for (var i = 0; i < names.length; i++) {
             selects = document.getElementsByName(names[i]);
@@ -1353,23 +1441,52 @@
             });
         }
 
-        for (index = 1; index <= 10; index++) {
-            if (index == 8) continue;
+        function checkStatus() {
+            var selects = document.getElementsByName('Carrier Product 2');
+            if (selects[selects.length - 1].value == 'American General' || selects[selects.length - 1].value == 'Great Western') {
+                return true;
+            } else
+                return false;
+        }
+
+        for (index = 1; index < 11; index++) {
+            if (index == 10) continue;
             document.getElementById('step' + index).addEventListener('click', function(e) {
+                id = e.target.id;
+                if (checkStatus() && id == 'step9'){
+                    return;
+                }
                 document.getElementsByClassName(e.target.id)[0].click();
             });
         }
+
+        document.getElementsByClassName('pre')[0].addEventListener('click', function(e) {
+            e.preventDefault();
+            if (checkStatus()) {
+                document.getElementsByClassName('step8')[0].click();
+            } else {
+                document.getElementsByClassName('step9')[0].click();
+            }
+        });
     })();
 
-    function save() {
-        document.getElementsByClassName('submit')[0].click();
+    function cleardispo() {
+        document.getElementById('Disposition').value = "Sale";
+        document.getElementsByName('email_selected')[0].value = document.getElementsByName('Carrier Product 2')[0].value + '_' + document.getElementsByName('Plan')[0].value;
+        // alert("Info Saved!");
     }
 
-    function next() {
-        document.getElementsByClassName('next')[0].click();
+    function save() {
+        document.getElementsByClassName('submit1')[0].click();
+    }
+
+    function saveandemail() {
+        document.getElementsByClassName('submit')[0].click();
+        cleardispo();
     }
 
     function pre() {
         document.getElementsByClassName('pre')[0].click();
     }
+    
 </script>
