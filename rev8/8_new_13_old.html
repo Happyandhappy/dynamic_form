@@ -60,15 +60,19 @@
                             <input type="hidden" control="input " id="DentalPlan" value="(#Dental Plan#)">
                             <input type="hidden" control="input " id="DentalCoverage" value="(#Dental Coverage#)">
                             <input type="hidden" control="input " id="VisionCoverage" value="(#Vision Coverage#)">
+                            <input type="hidden" control="input " name="SoldAgentList" id="SoldAgentList" value="(#SoldAgentList#)">
 
                             <button class="button hidden submit" id="submit">SAVE</button>
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step14_rev07" value="NEXT" class="button hidden next step14">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step12_rev07" value="PREVIOUS" class="button hidden pre step12">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step09_rev07" value="step9" class="button hidden step9">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step10_rev07" value="step10" class="button hidden step10">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step11_rev07" value="step11" class="button hidden step11">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step15_rev07" value="step15" class="button hidden step15">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step16_rev07" value="step16" class="button hidden step16">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step09_rev08" value="NEXT" class="button hidden step9">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step07_rev08" value="PREVIOUS" class="button hidden pre step7">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step01_rev08" value="step1" class="button hidden step1">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step02_rev08" value="step2" class="button hidden step2">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step03_rev08" value="step3" class="button hidden step3">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step04_rev08" value="step4" class="button hidden step4">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step05_rev08" value="step5" class="button hidden step5">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step06_rev08" value="step6" class="button hidden step6">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step10_rev08" value="step10" class="button hidden step10">
+
 
                             <div class="col-sm-12 ">
                                 <div class="col-sm-12 title " id="">
@@ -306,7 +310,7 @@
                                             <option value="Baltimore Life">Baltimore Life</option>
                                             <option value="Liberty Bankers Life">Liberty Bankers Life</option>
                                             <option value="American General">American General</option>
-                                            <!--<option value="Great Western">Great Western</option>-->
+                                            <option value="Great Western">Great Western</option>
                                             <!--<option value="Foresters">Foresters</option>-->
                                             <!--<option value="Prosperity">Prosperity</option>-->
                                             <!--<option value="5Star Life">5Star Life</option>-->
@@ -532,13 +536,13 @@
             <div class="sidenav">
                 <div class="progress_div">
                     <ul class="progressbar" id="progressbar">
-                        <li id="step1" class="active" style="width: 8%">Greetings & Discounts</li>
+                        <li id="step1" class="active" style="width: 8%">Greetings &amp; Discounts</li>
                         <li id="step2" class="active" style="width: 9%">Basic Information</li>
-                        <li id="step3" class="active" style="width: 10%">Coverage & Needs</li>
-                        <li id="step4" class="active" style="width: 11%">Disability & Health Interview</li>
-                        <li id="step5" class="active" style="width: 12%">Features, Budget & Recap</li>
-                        <li id="step6" class="active" style="width: 12%">Choices & Close</li>
-                        <li id="step7" class="active" style="width: 11%">Information & Banking</li>
+                        <li id="step3" class="active" style="width: 10%">Coverage &amp; Needs</li>
+                        <li id="step4" class="active" style="width: 11%">Disability &amp; Health Interview</li>
+                        <li id="step5" class="active" style="width: 12%">Features, Budget &amp; Recap</li>
+                        <li id="step6" class="active" style="width: 12%">Choices &amp; Close</li>
+                        <li id="step7" class="active" style="width: 11%">Information &amp; Banking</li>
                         <li id="step8" class="active" style="width: 10%">Prep For Call</li>
                         <li id="step9" style="width: 9%">Enrollment Call</li>
                         <li id="step10" style="width: 8%">Virtual Hug</li>
@@ -551,6 +555,7 @@
                         <h4 class="balt">GETTING BALTIMORE LIFE ON THE PHONE</h4>
                         <h4 class="lbl">GETTING LBL ON THE PHONE</h4>
                         <h4 class="amer">GETTING COMPANY ON THE PHONE</h4>
+                        <h4 class="west">GETTING COMPANY ON THE PHONE</h4>
                         <p></p>
                         <p style="padding:0;margin:0;color:#000000;font-size:11pt;;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
                             <span style="color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;;font-style:normal"></span>
@@ -561,8 +566,8 @@
                                 <span class="rna">Royal Neighbors of America</span>
                             <span class="balt">Baltimore Life</span>
                             <span class="lbl">Liberty Bankers Life</span>
-                            <span class="amer">American General</span> and getting you medically approved for coverage. Once you are approved, they are going to mail you a policy and your member benefits package. You'll be able to sit down and look it over
-                            to make sure everything is in order. I'm going to give you a call to check in to make sure all of your questions are answered, and then your coverage will begin on
+                            <span class="amer">American General</span> and getting you medically approved for coverage. Once you are approved, they are going to mail you a policy and your member benefits package. You'll be able to sit down and look it
+                            over to make sure everything is in order. I'm going to give you a call to check in to make sure all of your questions are answered, and then your coverage will begin on
                             <!--<input type="text" control="input " field-name="Draft Date" name="Draft Date" value="(#Draft Date#)">.-->
                             <input type="date" field-name="Draft Date" name="Draft Date" value="(#Draft Date#)">.
                             </span>
@@ -1296,8 +1301,8 @@
 </style>
 
 <script type="text/javascript">
-        function hideTags() {
-        var names = ['rna', 'balt', 'lbl', 'amer'];
+   function hideTags() {
+        var names = ['rna', 'balt', 'lbl', 'amer', 'west'];
         for (var i = 0; i < names.length; i++) {
             var tags = document.getElementsByClassName(names[i]);
             for (var j = 0; j < tags.length; j++)
@@ -1359,13 +1364,38 @@
             var tags = document.getElementsByClassName('amer');
             for (var j = 0; j < tags.length; j++)
                 tags[j].style.display = 'inline-block';
+        }else if (company == 'Great Western') {
+            var tags = document.getElementsByClassName('west');
+            for (var j = 0; j < tags.length; j++)
+                tags[j].style.display = 'inline-block';
         }
-
     }
 
+    function setSoldAgents(){
+        var SoldAgentList = document.getElementById('SoldAgentList').value;
+        var agents = SoldAgentList.split(",");
+        selects = document.getElementsByName('Sold Agent');
+        innerHTML = "";
+        for (i = 0 ; i < agents.length; i++){
+            innerHTML += "<option value='" + agents[i] + "'>" + agents[i] + "</option>";
+        }
+        for (i = 0; i < selects.length; i++){
+            selects[i].innerHTML = innerHTML;
+        }
+    }
+    function checkStatus() {
+        var selects = document.getElementsByName('Carrier Product 2');
+        if (selects[selects.length - 1].value == 'American General' || selects[selects.length - 1].value == 'Great Western') {
+            return true;
+        } else
+            return false;
+    }
+    
     (function() {
+        setSoldAgents();
         cur_page = parseInt(document.getElementById('page').value);
         hideTags();
+        
         var names = ['Gender', 'App Status', 'Carrier Product 2', 'Account Type', 'Plan', 'Sold Agent', 'Dental Plan', 'Dental Coverage', 'Vision Coverage'];
         var ids = ['Gender', 'AppStatus', 'CarrierProduct2', 'AccountType', 'Plan', 'SoldAgent', 'DentalPlan', 'DentalCoverage', 'VisionCoverage'];
         var inputs, index, name, notes, selects;
@@ -1422,11 +1452,28 @@
         for (index = 1; index < 11; index++) {
             if (index == 8) continue;
             document.getElementById('step' + index).addEventListener('click', function(e) {
+                var id = e.target.id;
+
+                if (checkStatus() && (id == 'step9')) {
+                    return;
+                }
                 document.getElementsByClassName(e.target.id)[0].click();
             });
         }
-    })();
 
+        document.getElementsByClassName('next')[0].addEventListener('click', function(e) {
+            e.preventDefault();
+            if (checkStatus()) {
+                document.getElementsByClassName('step10')[0].click();
+            } else {
+                document.getElementsByClassName('step9')[0].click();
+            }
+        });
+
+        
+        
+    })();
+    
     function save() {
         document.getElementsByClassName('submit')[0].click();
     }
@@ -1437,5 +1484,5 @@
 
     function pre() {
         document.getElementsByClassName('pre')[0].click();
-    }
+    }    
 </script>

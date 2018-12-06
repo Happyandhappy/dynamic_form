@@ -1274,8 +1274,29 @@
         document.getElementById('Plan').value = selects[0].value;
         document.getElementsByClassName('plan')[0].value = selects[1].value;
     }
+    function setSoldAgents(){
+        var SoldAgentList = document.getElementById('SoldAgentList').value;
+        var agents = SoldAgentList.split(",");
+        selects = document.getElementsByName('Sold Agent');
+        innerHTML = '<option value="(#Sold Agent#)" selected="" hidden="">(#Sold Agent#)</option>';
+        for (i = 0 ; i < agents.length; i++){
+            innerHTML += "<option value='" + agents[i] + "'>" + agents[i] + "</option>";
+        }
+        for (i = 0; i < selects.length; i++){
+            selects[i].innerHTML = innerHTML;
+        }
+    }
 
+    function checkStatus() {
+        var selects = document.getElementsByName('Carrier Product 2');
+        if (selects[selects.length - 1].value == 'American General') {
+            return true;
+        } else
+            return false;
+    }
+        
     (function() {
+        setSoldAgents();
         cur_page = parseInt(document.getElementById('page').value);
 
         var names = ['Gender', 'App Status', 'Carrier Product 2', 'Account Type', 'Plan', 'Sold Agent', 'Dental Plan', 'Dental Coverage', 'Vision Coverage'];

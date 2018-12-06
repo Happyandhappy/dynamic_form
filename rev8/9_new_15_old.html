@@ -60,15 +60,19 @@
                             <input type="hidden" control="input " id="DentalPlan" value="(#Dental Plan#)">
                             <input type="hidden" control="input " id="DentalCoverage" value="(#Dental Coverage#)">
                             <input type="hidden" control="input " id="VisionCoverage" value="(#Vision Coverage#)">
+                            <input type="hidden" control="input " name="SoldAgentList" id="SoldAgentList" value="(#SoldAgentList#)">
+
 
                             <button class="button hidden submit" id="submit">SAVE</button>
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step16_rev07" value="NEXT" class="button hidden next step16">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step14_rev07" value="PREVIOUS" class="button hidden pre step14">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step09_rev07" value="step9" class="button hidden step9">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step10_rev07" value="step10" class="button hidden step10">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step11_rev07" value="step11" class="button hidden step11">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step12_rev07" value="step12" class="button hidden step12">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step13_rev07" value="step13" class="button hidden step13">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step10_rev08" value="NEXT" class="button hidden next step10">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step08_rev08" value="PREVIOUS" class="button hidden pre step8">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step01_rev08" value="step1" class="button hidden step1">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step02_rev08" value="step2" class="button hidden step2">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step03_rev08" value="step3" class="button hidden step3">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step04_rev08" value="step4" class="button hidden step4">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step05_rev08" value="step5" class="button hidden step5">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step06_rev08" value="step6" class="button hidden step6">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step07_rev08" value="step7" class="button hidden step7">
 
                             <div class="col-sm-12 ">
                                 <div class="col-sm-12 title " id="">
@@ -306,7 +310,7 @@
                                             <option value="Baltimore Life">Baltimore Life</option>
                                             <option value="Liberty Bankers Life">Liberty Bankers Life</option>
                                             <option value="American General">American General</option>
-                                            <!--<option value="Great Western">Great Western</option>-->
+                                            <option value="Great Western">Great Western</option>
                                             <!--<option value="Foresters">Foresters</option>-->
                                             <!--<option value="Prosperity">Prosperity</option>-->
                                             <!--<option value="5Star Life">5Star Life</option>-->
@@ -532,13 +536,13 @@
             <div class="sidenav">
                 <div class="progress_div">
                     <ul class="progressbar" id="progressbar">
-                        <li id="step1" class="active" style="width: 8%">Greetings & Discounts</li>
+                        <li id="step1" class="active" style="width: 8%">Greetings &amp; Discounts</li>
                         <li id="step2" class="active" style="width: 9%">Basic Information</li>
-                        <li id="step3" class="active" style="width: 10%">Coverage & Needs</li>
-                        <li id="step4" class="active" style="width: 11%">Disability & Health Interview</li>
-                        <li id="step5" class="active" style="width: 12%">Features, Budget & Recap</li>
-                        <li id="step6" class="active" style="width: 12%">Choices & Close</li>
-                        <li id="step7" class="active" style="width: 11%">Information & Banking</li>
+                        <li id="step3" class="active" style="width: 10%">Coverage &amp; Needs</li>
+                        <li id="step4" class="active" style="width: 11%">Disability &amp; Health Interview</li>
+                        <li id="step5" class="active" style="width: 12%">Features, Budget &amp; Recap</li>
+                        <li id="step6" class="active" style="width: 12%">Choices &amp; Close</li>
+                        <li id="step7" class="active" style="width: 11%">Information &amp; Banking</li>
                         <li id="step8" class="active" style="width: 10%">Prep For Call</li>
                         <li id="step9" class="active" style="width: 9%">Enrollment Call</li>
                         <li id="step10" style="width: 8%">Virtual Hug</li>
@@ -869,7 +873,7 @@
                                         <option value="Baltimore Life">Baltimore Life</option>
                                         <option value="Liberty Bankers Life">Liberty Bankers Life</option>
                                         <option value="American General">American General</option>
-                                        <!--<option value="Great Western">Great Western</option>-->
+                                        <option value="Great Western">Great Western</option>
                                         <!--<option value="Foresters">Foresters</option>-->
                                         <!--<option value="Prosperity">Prosperity</option>-->
                                         <!--<option value="5Star Life">5Star Life</option>-->
@@ -1832,7 +1836,7 @@
                                     <option value="Baltimore Life">Baltimore Life</option>
                                     <option value="Liberty Bankers Life">Liberty Bankers Life</option>
                                     <option value="American General">American General</option>
-                                    <!--<option value="Great Western">Great Western</option>-->
+                                    <option value="Great Western">Great Western</option>
                                     <!--<option value="Foresters">Foresters</option>-->
                                     <!--<option value="Prosperity">Prosperity</option>-->
                                     <!--<option value="5Star Life">5Star Life</option>-->
@@ -1924,7 +1928,6 @@
 </body>
 
 </html>
-
 <style type="text/css">
     #content {
         padding-left: 0px;
@@ -2627,9 +2630,30 @@
             document.getElementsByClassName('amer')[0].style.display = 'block';
         }
     }
-
+    function checkStatus() {
+        var selects = document.getElementsByName('Carrier Product 2');
+        if (selects[selects.length - 1].value == 'American General') {
+            return true;
+        } else
+            return false;
+    }
+    function setSoldAgents(){
+        var SoldAgentList = document.getElementById('SoldAgentList').value;
+        var agents = SoldAgentList.split(",");
+        selects = document.getElementsByName('Sold Agent');
+        innerHTML = "";
+        for (i = 0 ; i < agents.length; i++){
+            innerHTML += "<option value='" + agents[i] + "'>" + agents[i] + "</option>";
+        }
+        for (i = 0; i < selects.length; i++){
+            selects[i].innerHTML = innerHTML;
+        }
+    }
+    
 
     (function() {
+        setSoldAgents();
+        
         cur_page = parseInt(document.getElementById('page').value);
 
         var names = ['Gender', 'App Status', 'Carrier Product 2', 'Account Type', 'Plan', 'Sold Agent', 'Dental Plan', 'Dental Coverage', 'Vision Coverage'];

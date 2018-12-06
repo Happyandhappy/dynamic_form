@@ -18,7 +18,7 @@
                         <!-- start section 1 -->
                         <div class="col-sm-12 navdiv">
                             <!--<br>-->
-                            <div class="col-sm-9 adjust ">
+                            <div class="col-sm-9 adjust">
                                 <div class="col-sm-12">
                                     <div class="col-sm-12 nopadding ">
                                         <span class="bold ">(#FirstName#) (#LastName#) (#Preferred Name#)</span>
@@ -59,17 +59,18 @@
                             <input type="hidden" control="input " id="DentalPlan" value="(#Dental Plan#)">
                             <input type="hidden" control="input " id="DentalCoverage" value="(#Dental Coverage#)">
                             <input type="hidden" control="input " id="VisionCoverage" value="(#Vision Coverage#)">
+                            <input type="hidden" control="input " id="SoldAgentList" value="Amanda Tompkins,Barry Lyons,Colter Steklein,Courtney Strobec,Elizabeth Overstreet,Janice Adams,Jordan Barrett,Josh Bowers,Justin York,Kelly Tomlinson,Lisa Soto,Lynn Sperry,Mark Ross,Mason Jackson,Matt Hook,Melanie Montgomery,Michael Montes,Mike Grasso,Mike Stolp,Napolian Sopon,Sessalie Chambuso,Willie Stephens">
 
                             <button class="button hidden submit" id="submit">SAVE</button>
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step02_rev07" value="NEXT" class="button next hidden step2">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step03_rev07" value="step3" class="button hidden step3">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step04_rev07" value="step4" class="button hidden step4">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step05_rev07" value="step5" class="button hidden step5">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step06_rev07" value="step6" class="button hidden step6">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step07_rev07" value="step7" class="button hidden step7">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step08_rev07" value="step8" class="button hidden step8">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step09_rev07" value="step9" class="button hidden step9">
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step10_rev07" value="step10" class="button hidden step10">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step02_rev08" value="NEXT" class="button next hidden step2">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step03_rev08" value="step3" class="button hidden step3">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step04_rev08" value="step4" class="button hidden step4">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step05_rev08" value="step5" class="button hidden step5">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step06_rev08" value="step6" class="button hidden step6">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step07_rev08" value="step7" class="button hidden step7">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step08_rev08" value="step8" class="button hidden step8">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step09_rev08" value="step9" class="button hidden step9">
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step10_rev08" value="step10" class="button hidden step10">
 
                             <div class="col-sm-12 ">
                                 <div class="col-sm-12 title " id="">
@@ -105,30 +106,6 @@
                                         <label><strong>Sold Agent</strong>
                                         </label>
                                         <select name="Sold Agent" value="(#Sold Agent#)" class="form-control">
-                                            <!--<option value="" selected="" disabled="">Select One</option>-->
-                                            <option value="(#Sold Agent#)" selected="" hidden="">(#Sold Agent#)</option>
-                                            <option>Amanda Tompkins</option>
-                                            <option>Barry Lyons</option>
-                                            <option>Colter Steklein</option>
-                                            <option>Courtney Strobeck</option>
-                                            <option>Elizabeth Overstreet</option>
-                                            <option>Janice Adams</option>
-                                            <option>Jordan Barrett</option>
-                                            <option>Josh Bowers</option>
-                                            <option>Justin York</option>
-                                            <option>Kelly Tomlinson</option>
-                                            <option>Lisa Soto</option>
-                                            <option>Lynn Sperry</option>
-                                            <option>Mark Ross</option>
-                                            <option>Mason Jackson</option>
-                                            <option>Matt Hook</option>
-                                            <option>Melanie Montgomery</option>
-                                            <option>Michael Montes</option>
-                                            <option>Mike Grasso</option>
-                                            <option>Mike Stolp</option>
-                                            <option>Napolian Sopon</option>
-                                            <option>Sessalie Chambuso</option>
-                                            <option>Willie Stephens</option>
                                         </select>
                                         <!-- <input type="text" control="input " class="form-control" field-name="Sold Agent" name="Sold Agent" value="(#Sold Agent#)"> -->
                                     </div>
@@ -307,7 +284,7 @@
                                             <option value="Baltimore Life">Baltimore Life</option>
                                             <option value="Liberty Bankers Life">Liberty Bankers Life</option>
                                             <option value="American General">American General</option>
-                                            <!--<option value="Great Western">Great Western</option>-->
+                                            <option value="Great Western">Great Western</option>
                                             <!--<option value="Foresters">Foresters</option>-->
                                             <!--<option value="Prosperity">Prosperity</option>-->
                                             <!--<option value="5Star Life">5Star Life</option>-->
@@ -532,16 +509,16 @@
             <div class="sidenav">
                 <div class="progress_div">
                     <ul class="progressbar" id="progressbar">
-                        <li id="step1" class="active" style="width: 8%" value="1">GREETING & DISCOUNT</li>
-                        <li id="step2" style="width: 9%" value="2">GATHER BASIC INFORMATION</li>
-                        <li id="step3" style="width: 10%" value="3"></li>
-                        <li id="step4" style="width: 11%" value="4">CURRENT INSURANCE</li>
-                        <li id="step5" style="width: 12%" value="5">NEEDS AND COVERAGE AMOUNTS</li>
-                        <li id="step6" style="width: 12%" value="6">DISABILITY &amp; HEALTH INTERVIEW</li>
-                        <li id="step7" style="width: 11%" value="7">IMPORTANT FEATURES</li>
-                        <li id="step8" style="width: 10%" value="8">BUDGET RANGE</li>
-                        <li id="step9" style="width: 9%" value="9">RECAP</li>
-                        <li id="step10" style="width: 8%" value="10">GO RUN THE CHOICES</li>
+                        <li id="step1" class="active" style="width: 8%">Greetings & Discounts</li>
+                        <li id="step2" style="width: 9%">Basic Information</li>
+                        <li id="step3" style="width: 10%">Coverage & Needs</li>
+                        <li id="step4" style="width: 11%">Disability & Health Interview</li>
+                        <li id="step5" style="width: 12%">Features, Budget & Recap</li>
+                        <li id="step6" style="width: 12%">Choices & Close</li>
+                        <li id="step7" style="width: 11%">Information & Banking</li>
+                        <li id="step8" style="width: 10%">Prep For Call</li>
+                        <li id="step9" style="width: 9%">Enrollment Call</li>
+                        <li id="step10" style="width: 8%">Virtual Hug</li>
                     </ul>
                 </div>
                 <div class="bar_top"></div>
@@ -1417,7 +1394,23 @@
         document.getElementsByClassName('plan')[0].value = selects[1].value;
     }
 
+    function setSoldAgents(){
+        var SoldAgentList = document.getElementById('SoldAgentList').value;
+        var agents = SoldAgentList.split(",");
+        console.log(agents);
+        selects = document.getElementsByName('Sold Agent');
+        innerHTML = "";
+        for (i = 0 ; i < agents.length; i++){
+            innerHTML += "<option value='" + agents[i] + "'>" + agents[i] + "</option>";
+        }
+        for (i = 0; i < selects.length; i++){
+            selects[i].innerHTML = innerHTML;
+        }
+    }
+
     (function() {
+        
+        setSoldAgents();
 
         cur_page = parseInt(document.getElementById('page').value);
 
